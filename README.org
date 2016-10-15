@@ -1,0 +1,39 @@
+#+TITLE: personal layer
+
+# The maximum height of the logo should be 200 pixels.
+[[img/personal.png]]
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+ - [[#description][Description]]
+ - [[#install][Install]]
+ - [[#key-bindings][Key bindings]]
+ - [[#raw-notes][Raw notes]]
+
+* Description
+This layer does wonderful things:
+  - thing01
+
+* Install
+To use this configuration layer, add it to your =~/.spacemacs=. You will need to
+add =personal= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key bindings
+
+| Key Binding | Description    |
+|-------------+----------------|
+| ~SPC x x x~ | Does thing01   |
+# Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
+# Examples:
+# [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
+# [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
+# If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
+
+* Raw notes
+
+Manually symlink the .spacemacs file into the proper ~/ location 
+I should probably write some kinda script for that.  whatev.
+It would have to be in elisp to ensure that the proper env variable for ~/ was used. 
+I am not sure how to do file operations in elisp.
+and I am not set up to learn at the moment.  defer it.  
