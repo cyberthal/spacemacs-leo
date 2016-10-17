@@ -19,6 +19,7 @@
 
 
 ;; ** org-mode
+(with-eval-after-load 'org 
 ;; *** make org start with wrapped lines.  works.
 (setq org-startup-truncated nil)
 
@@ -45,3 +46,10 @@
 
 (add-hook 'org-mode-hook 'variable-pitch-mode)
 
+;; **** end org-mode block
+
+) 
+
+;; ** outshine
+
+(add-hook 'ahk-mode-hook 'outline-minor-mode)
