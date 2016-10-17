@@ -37,3 +37,5 @@ I should probably write some kinda script for that.  whatev.
 It would have to be in elisp to ensure that the proper env variable for ~/ was used. 
 I am not sure how to do file operations in elisp.
 and I am not set up to learn at the moment.  defer it.  
+
+also, rename the directory you cloned from spacemacs-personal to personal
