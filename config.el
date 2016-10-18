@@ -46,7 +46,13 @@
 
 (add-hook 'org-mode-hook 'variable-pitch-mode)
 
-;; **** end org-mode block
+;; *** org priorities 0-9
+
+(setq org-highest-priority ?0)
+(setq org-lowest-priority ?9)
+(setq org-default-priority ?5)
+
+;; *** end org-mode block
 
 ) 
 
