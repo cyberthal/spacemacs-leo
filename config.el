@@ -22,6 +22,7 @@
 (with-eval-after-load 'org 
 ;; *** make org start with wrapped lines.  works.
 (setq org-startup-truncated nil)
+(setq line-move-visual nil)
 
 ;; *** word wrap for org only.  works.
 (add-hook 'org-mode-hook #'toggle-word-wrap)
@@ -51,11 +52,52 @@
 (setq org-highest-priority ?0)
 (setq org-lowest-priority ?9)
 (setq org-default-priority ?5)
+;; *** load org agenda files recursively
+
+;; http://stackoverflow.com/questions/17215868/recursively-adding-org-files-in-a-top-level-directory-for-org-agenda-files-take
+
+;; Collect all .org from my Org directory and subdirs
+
+;; **** setup the search function
+
+(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'") ; default value
+(defun load-org-agenda-files-recursively (dir) "Find all directories in DIR."
+    (unless (file-directory-p dir) (error "Not a directory `%s'" dir))
+    (unless (equal (directory-files dir nil org-agenda-file-regexp t) nil)
+      (add-to-list 'org-agenda-files dir)
+    )
+    (dolist (file (directory-files dir nil nil t))
+        (unless (member file '("." ".."))
+            (let ((file (concat dir file "/")))
+                (when (file-directory-p file)
+                    (load-org-agenda-files-recursively file)
+                )
+            )
+        )
+    )
+)
+
+;; **** set the search locations
+
+; add every dir but topical
+; cuz it's too big.  and because I need a place to pseudo-archive surplus TODO/DONE entries 
+
+(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/0-inbox/" )
+(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/1-time/" )
+(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/2-people/" )
+(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/3-todo/" )
+(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/4-scratch/" )
 
 ;; *** end org-mode block
 
 ) 
 
+
+
 ;; ** outshine
 
 (add-hook 'ahk-mode-hook 'outline-minor-mode)
+
+;; ** dired sorting by directories first
+
+(setq dired-listing-switches "-lGh --group-directories-first")
