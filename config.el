@@ -106,4 +106,4 @@
 
 ;; ** nyan-mode
 
-(spaceline-toggle-nyan-cat-on)
+; (spaceline-toggle-nyan-cat-on)
