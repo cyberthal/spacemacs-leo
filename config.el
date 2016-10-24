@@ -1,4 +1,5 @@
 ;; * config.el of private/personal layer
+;; * 
 ;; ** ergonomics
 ;; *** restore previous desktop
 
@@ -102,3 +103,7 @@
 ;; ** dired sorting by directories first
 
 (setq dired-listing-switches "-lGh --group-directories-first")
+
+;; ** nyan-mode
+
+(spaceline-toggle-nyan-cat-on)
