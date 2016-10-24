@@ -1,4 +1,5 @@
 ;; * config.el of private/personal layer
+;; * top
 ;; ** ergonomics
 ;; *** restore previous desktop
 
@@ -105,3 +106,5 @@
 ;; ** dired sorting by directories first
 
 (setq dired-listing-switches "-alGh --group-directories-first")
+
+
