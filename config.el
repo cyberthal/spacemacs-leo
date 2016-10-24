@@ -2,7 +2,10 @@
 ;; ** ergonomics
 ;; *** restore previous desktop
 
-(desktop-save-mode 1)
+(add-hook 'spacemacs-post-user-config-hook
+          (lambda ()
+            (desktop-save-mode)
+            (desktop-read)))
 
 ;; *** removes annoying left fringe arrow for wrapped lines.
 (setq-default fringe-indicator-alist '(
