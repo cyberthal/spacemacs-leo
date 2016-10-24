@@ -104,4 +104,4 @@
 
 ;; ** dired sorting by directories first
 
-(setq dired-listing-switches "-lGh --group-directories-first")
+(setq dired-listing-switches "-alGh --group-directories-first")
