@@ -2,7 +2,7 @@
 ;; ** ergonomics
 ;; *** restore previous desktop
 
-(desktop-save-mode 1)
+; (desktop-save-mode 1)
 
 ;; *** removes annoying left fringe arrow for wrapped lines.
 (setq-default fringe-indicator-alist '(
