@@ -15,10 +15,12 @@
 (global-set-key (kbd "H-f") 'cb-throw)
 
 ;; ** org-mode
+(with-eval-after-load 'org 
 
 ;; bind org-todo to H-t
 (global-set-key (kbd "H-t") 'org-todo)
 
+) ; end org section
 ;; ** navigation
 
 ;; *** outline
@@ -42,9 +44,10 @@
 
 ;; **** narrow/widen visible region
 
+(with-eval-after-load 'org 
 ;; bind org-narrow-to-subtree to H-d
 (global-set-key (kbd "H-d") 'org-narrow-to-subtree)
-
+)
 ;; bind widen to H-s
 (global-set-key (kbd "H-s") 'widen)
 

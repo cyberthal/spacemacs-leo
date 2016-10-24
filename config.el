@@ -61,6 +61,7 @@
 ;; **** setup the search function
 
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'") ; default value
+(setq org-agenda-files nil)
 (defun load-org-agenda-files-recursively (dir) "Find all directories in DIR."
     (unless (file-directory-p dir) (error "Not a directory `%s'" dir))
     (unless (equal (directory-files dir nil org-agenda-file-regexp t) nil)
