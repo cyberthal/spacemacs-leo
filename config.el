@@ -22,6 +22,16 @@
                                        (unknown . question-mark)))
 
 
+;; *** dired sorting by directories first
+
+(setq dired-listing-switches "-alGh --group-directories-first")
+
+
+;; *** outshine
+
+(add-hook 'ahk-mode-hook 'outline-minor-mode)
+
+
 ;; ** org-mode
 (with-eval-after-load 'org 
 ;; *** make org start with wrapped lines.  works.
@@ -97,14 +107,5 @@
 
 ) 
 
-
-
-;; ** outshine
-
-(add-hook 'ahk-mode-hook 'outline-minor-mode)
-
-;; ** dired sorting by directories first
-
-(setq dired-listing-switches "-alGh --group-directories-first")
 
 
