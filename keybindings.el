@@ -1,4 +1,5 @@
 ;; * keybindings.el in private/personal layer
+;; * code
 
 ;; ** enable hyper and super keys
 
@@ -14,6 +15,8 @@
 ;; bind cb-throw to H-f
 (global-set-key (kbd "H-f") 'cb-throw)
 
+;; bind cb-dthrow to H-g
+(global-set-key (kbd "H-f") 'cb-dthrow)
 ;; ** org-mode
 (with-eval-after-load 'org 
 
