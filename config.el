@@ -1,14 +1,12 @@
 ;; * config.el of private/personal layer
 ;; * top
 ;; ** ergonomics
-;; *** restore previous desktop
+;; *** visual
+;; **** nyan-mode
 
-(add-hook 'spacemacs-post-user-config-hook
-          (lambda ()
-            (desktop-save-mode)
-            (desktop-read)))
+                                        ; (spaceline-toggle-nyan-cat-on)
 
-;; *** removes annoying left fringe arrow for wrapped lines.
+;; **** removes annoying left fringe arrow for wrapped lines.
 (setq-default fringe-indicator-alist '(
                                        (truncation left-arrow right-arrow)
                                        (continuation nil right-curly-arrow) ;; left-curly-arrow
@@ -22,6 +20,13 @@
                                        (unknown . question-mark)))
 
 
+;; *** restore previous desktop
+
+(add-hook 'spacemacs-post-user-config-hook
+          (lambda ()
+            (desktop-save-mode)
+            (desktop-read)))
+
 ;; *** dired sorting by directories first
 
 (setq dired-listing-switches "-alGh --group-directories-first")
@@ -30,6 +35,7 @@
 ;; *** outshine
 
 (add-hook 'ahk-mode-hook 'outline-minor-mode)
+
 
 
 ;; ** org-mode
@@ -106,6 +112,4 @@
 ;; *** end org-mode block
 
 ) 
-
-
 
