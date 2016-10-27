@@ -31,6 +31,11 @@
 
 (setq dired-listing-switches "-alGh --group-directories-first")
 
+(add-hook
+ 'dired-before-readin-hook
+ (lambda ()
+   (when (file-remote-p default-directory)
+     (setq dired-actual-switches "-al"))))
 
 ;; *** outshine
 
