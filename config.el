@@ -31,6 +31,11 @@
 
 (setq dired-listing-switches "-alGh --group-directories-first")
 
+(add-hook
+ 'dired-before-readin-hook
+ (lambda ()
+   (when (file-remote-p default-directory)
+     (setq dired-actual-switches "-al"))))
 
 ;; *** outshine
 
@@ -107,7 +112,7 @@
 (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/1-time/" )
 (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/2-people/" )
 (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/3-todo/" )
-(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/4-scratch/" )
+(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/5-scratch/" )
 
 ;; *** end org-mode block
 
