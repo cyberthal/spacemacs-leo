@@ -72,3 +72,8 @@
 ;; ** windows
 
 (global-set-key (kbd "H-3") 'split-window-right)
+
+;; ** timestamps
+
+(global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
+
