@@ -62,3 +62,12 @@
 ;; bind forward and backward sentence to Super home row
 (global-set-key (kbd "s-j") 'backward-sentence)
 (global-set-key (kbd "s-k") 'forward-sentence)
+
+;; ** window layout
+
+;; delete other windows = H-1
+(global-set-key (kbd "H-1") 'spacemacs/toggle-maximize-buffer)
+
+;; delete current window = H-2
+(global-set-key (kbd "H-2") 'delete-window)
+
