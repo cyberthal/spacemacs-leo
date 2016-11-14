@@ -31,8 +31,14 @@
 ;; switch to other window = H-a
 (global-set-key (kbd "H-a") 'other-window)
 
+;; **** indirect buffers
+
 ;; make an indirect buffer with narrowed tree for outshine
 (global-set-key (kbd "H-c H-x b") 'outline-next-visible-heading)
+
+;; make an indirect buffer other window
+(global-set-key (kbd "H-b") 'clone-indirect-buffer-other-window)
+
 
 ;; **** heading movement
 
@@ -70,4 +76,12 @@
 
 ;; delete current window = H-2
 (global-set-key (kbd "H-2") 'delete-window)
+
+;; split window vertically
+(global-set-key (kbd "H-3") 'split-window-right)
+
+;; ** timestamps
+
+(global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
+======= end
 
