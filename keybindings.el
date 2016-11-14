@@ -83,5 +83,3 @@
 ;; ** timestamps
 
 (global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
-======= end
-
