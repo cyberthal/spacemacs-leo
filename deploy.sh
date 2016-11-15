@@ -1,5 +1,6 @@
 #!/bin/bash
 rm -f ~/.spacemacs
-ln -s .spacemacs ~/
+ln -s ~/1-mansort/git-/hub/emacs/spacemacs/personal/.spacemacs ~/
 
-ln -s /../ ~/.emacs.d/private/personal
+rm -rf ~/.emacs.d/private/personal
+ln -s ~/1-mansort/git-/hub/emacs/spacemacs/personal ~/.emacs.d/private/personal
