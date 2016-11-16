@@ -83,3 +83,7 @@
 ;; ** timestamps
 
 (global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
+
+;; ** save
+
+(global-set-key (kbd "s-s") 'save-some-buffers)
