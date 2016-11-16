@@ -23,6 +23,11 @@
 ;; bind org-todo to H-t
 (global-set-key (kbd "H-t") 'org-todo)
 
+;; *** timestamps
+
+(global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
+(global-set-key (kbd "s-SPC") 'org-time-stamp)
+
 ) ; end org section
 ;; ** navigation
 
@@ -80,10 +85,11 @@
 ;; split window vertically
 (global-set-key (kbd "H-3") 'split-window-right)
 
-;; ** timestamps
 
-(global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
-(global-set-key (kbd "s-SPC") 'org-time-stamp)
 ;; ** save
 
 (global-set-key (kbd "s-s") 'save-some-buffers)
+
+;; ** dired
+
+(global-set-key (kbd "s-d") 'ido-dired)
