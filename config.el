@@ -43,7 +43,7 @@
 
 
 
-;; ** org-mode
+;; ** org-mode & bbcodeize
 (with-eval-after-load 'org 
 ;; *** make org start with wrapped lines.  works.
 (setq org-startup-truncated nil)
@@ -113,6 +113,11 @@
 ;(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/2-people/" )
 ;(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/3-todo/" )
 ;(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/5-scratch/" )
+
+;; *** load bbcodeize
+
+(push "~/.emacs.d/private/personal/bbcode/" load-path)
+(require 'bbcodeize)
 
 ;; *** end org-mode block
 
