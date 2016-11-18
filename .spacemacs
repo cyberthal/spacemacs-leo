@@ -325,7 +325,7 @@ you should place your code here."
  '(org-adapt-indentation nil)
  '(org-agenda-files
    (quote
-    
+    (nil)))
  '(org-id-link-to-org-use-id (quote create-if-interactive))
  '(org-indirect-buffer-display (quote other-window))
  '(org-todo-keywords
