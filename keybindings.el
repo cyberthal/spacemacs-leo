@@ -16,7 +16,7 @@
 (global-set-key (kbd "H-f") 'cb-throw)
 
 ;; bind cb-dthrow to H-g
-(global-set-key (kbd "H-g") 'cb-dthrow)
+(global-set-key (kbd "H-g") 'cb-throw-up)
 ;; ** org-mode
 (with-eval-after-load 'org 
 
