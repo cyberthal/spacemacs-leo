@@ -101,6 +101,10 @@
     )
 )
 
+;; **** load the paths
+
+(push "~/.emacs.d/private/personal/" load-path)
+(require 'maintext-toggle)
 ;; *** load bbcodeize
 
 (push "~/.emacs.d/private/personal/bbcode/" load-path)
