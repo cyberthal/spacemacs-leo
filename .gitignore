@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/windows,emacs,elisp,linux
 
 ### Windows ###
@@ -91,3 +90,6 @@ flycheck_*.el
 
 # git
 .gitconfig
+
+#leo3
+maintext-toggle.el
