@@ -41,8 +41,6 @@
 
 (add-hook 'ahk-mode-hook 'outline-minor-mode)
 
-
-
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org 
 ;; *** make org start with wrapped lines.  works.
@@ -102,16 +100,6 @@
         )
     )
 )
-
-;; **** set the search locations
-
-; add every dir but topical
-; cuz it's too big.  and because I need a place to pseudo-archive surplus TODO/DONE entries 
-
-(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/1-time/" )
-(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/2-people/" )
-(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/3-todo/" )
-(load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/5-scratch/" )
 
 ;; *** load bbcodeize
 
