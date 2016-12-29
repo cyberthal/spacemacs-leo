@@ -10,3 +10,5 @@
   (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/3-todo/" )
   (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/5-scratch/" )
   )
+
+(provide 'maintext-toggle)
