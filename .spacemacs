@@ -306,11 +306,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
   (add-to-list 'exec-path "c:/Users/User/.babun/cygwin/bin")
 
-;; Dired
+  ;; Dired
   (require 'dired-x) ; Enable dired-x
   (require 'dired+)  ; Enable dired+
+
+  (require 'git-annex)
+
 )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

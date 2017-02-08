@@ -115,7 +115,3 @@
 ) 
 
 
-
-;; ** git-annex
-
-(require 'git-annex)
