@@ -316,6 +316,10 @@ you should place your code here."
 
   (require 'git-annex)
 
+  ;; load org agenda files
+  (push "~/.emacs.d/private/personal/" load-path)
+  (require 'maintext-toggle)
+
 )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -335,6 +339,7 @@ you should place your code here."
     ("c:/Users/User/.babun/cygwin/bin" "/usr/local/sbin/" "/usr/local/bin/" "/usr/bin/" "/usr/lib/jvm/default/bin/" "/usr/bin/site_perl/" "/usr/bin/vendor_perl/" "/usr/bin/core_perl/" "/usr/lib/emacs/25.1/x86_64-unknown-linux-gnu/" "~/bin/")))
  '(find-file-visit-truename nil)
  '(global-dired-hide-details-mode t)
+ '(magit-git-executable "c:/Program Files (x86)/Git/mingw32/bin/git.exe")
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
