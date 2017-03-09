@@ -110,8 +110,6 @@
 
 ) 
 
-
-
 ;; ** Windows path & exec-path
 
 ;; adapted from Xah's code here:
@@ -140,6 +138,7 @@
     (setq exec-path
           (append exec-path cb-NT-extra-paths)
           )
+    (setq magit-git-executable "c:/Program Files (x86)/Git/bin/git.exe")
     )
   )
 
