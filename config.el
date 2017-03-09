@@ -111,3 +111,22 @@
 ) 
 
 
+
+;; ** Windows path & exec-path
+
+(when (string-equal system-type "windows-nt")
+  (let (
+        (mypaths
+         '(
+           "C:/cygwin/usr/local/bin"
+           "C:/cygwin/usr/bin"
+           "C:/cygwin/bin"
+
+           ;;"C:/Program Files (x86)/ErgoEmacs/msys/bin"
+           ) )
+        )
+
+    (setenv "PATH" (mapconcat 'identity mypaths ";") )
+
+    (setq exec-path (append mypaths (list "." exec-directory)) )
+    ) )
