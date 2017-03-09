@@ -345,6 +345,7 @@ you should place your code here."
  '(find-file-visit-truename nil)
  '(global-dired-hide-details-mode t)
  '(ls-lisp-dirs-first t)
+ '(ls-lisp-use-insert-directory-program t)
  '(magit-git-executable "git")
  '(nrepl-message-colors
    (quote
