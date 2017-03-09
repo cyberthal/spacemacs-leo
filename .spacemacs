@@ -345,7 +345,7 @@ you should place your code here."
  '(find-file-visit-truename nil)
  '(global-dired-hide-details-mode t)
  '(ls-lisp-dirs-first t)
- '(magit-git-executable "c:/Program Files (x86)/Git/mingw32/bin/git.exe")
+ '(magit-git-executable "git")
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
