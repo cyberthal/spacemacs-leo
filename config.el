@@ -114,19 +114,37 @@
 
 ;; ** Windows path & exec-path
 
+;; adapted from Xah's code here:
+;; http://ergoemacs.org/emacs/emacs_env_var_paths.html
+
 (when (string-equal system-type "windows-nt")
   (let (
-        (mypaths
-         '(
-           "C:/cygwin/usr/local/bin"
-           "C:/cygwin/usr/bin"
-           "C:/cygwin/bin"
+        (cb-NT-extra-paths
+          '(
+            "C:/cygwin/usr/local/bin"
+            "C:/cygwin/usr/bin"
+            "C:/cygwin/bin"
 
-           ;;"C:/Program Files (x86)/ErgoEmacs/msys/bin"
-           ) )
+            ;;"C:/Program Files (x86)/ErgoEmacs/msys/bin"
+            )
+         )
         )
 
-    (setenv "PATH" (mapconcat 'identity mypaths ";") )
+    (setenv "PATH"
+            (concat 
+             (getenv "PATH")
+             ";"
+             (mapconcat 'identity cb-NT-extra-paths ";")
+             )
+            )
+    (setq exec-path
+          (append exec-path cb-NT-extra-paths)
+          )
+    )
+  )
 
-    (setq exec-path (append mypaths (list "." exec-directory)) )
-    ) )
+;; snippets handy for testing purposes
+;; (setenv "PATH" "C:\\msys32\\mingw32\\bin;C:\\msys32\\usr\\local\\bin;C:\\msys32\\usr\\bin;C:\\msys32\\usr\\bin;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\msys32\\usr\\bin\\site_perl;C:\\msys32\\usr\\bin\\vendor_perl;C:\\msys32\\usr\\bin\\core_perl")
+;; (setq exec-path '("c:/msys32/mingw32/bin" "C:/msys32/usr/local/bin" "C:/msys32/usr/bin" "C:/msys32/usr/bin" "C:/Windows/System32" "C:/Windows" "C:/Windows/System32/Wbem" "C:/Windows/System32/WindowsPowerShell/v1.0/" "C:/msys32/usr/bin/site_perl" "C:/msys32/usr/bin/vendor_perl" "C:/msys32/usr/bin/core_perl" "c:/msys32/mingw32/libexec/emacs/25.1/i686-w64-mingw32"))
+;; (getenv "PATH")
+;; (insert exec-path)
