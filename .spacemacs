@@ -315,8 +315,8 @@ you should place your code here."
   (require 'git-annex)
 
   ;; dired-quick-sort activate
-  (require 'dired-quick-sort)
-  (dired-quick-sort-setup)
+  ;; (require 'dired-quick-sort)
+  ;; (dired-quick-sort-setup)
 
   ;; load org agenda files
   (push "~/.emacs.d/private/personal/" load-path)
