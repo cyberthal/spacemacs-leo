@@ -346,9 +346,6 @@ you should place your code here."
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(org-adapt-indentation nil)
- '(org-agenda-files
-   (quote
-    
  '(org-id-link-to-org-use-id (quote create-if-interactive))
  '(org-indirect-buffer-display (quote other-window))
  '(org-todo-keywords
