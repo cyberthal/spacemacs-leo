@@ -1,6 +1,12 @@
 ;; * Toggle whether maintext autoloads
 ;; * Set the search locations
 
+(defun cb-clear-org-agenda ()
+  "Empties org-agenda-files"
+  (interactive)
+  (setq org-agenda-files nil)
+  )
+
 (defun cb-refresh-org-agenda ()
   "Fixes broken agenda from new, moved or moved files."
   (interactive)
