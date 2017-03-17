@@ -341,7 +341,7 @@ you should place your code here."
  '(global-dired-hide-details-mode t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-use-insert-directory-program t)
- '(magit-git-executable "git")
+ ;; '(magit-git-executable nil t)
  '(nrepl-message-colors
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
