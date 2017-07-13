@@ -20,13 +20,6 @@
                                        (unknown . question-mark)))
 
 
-;; *** restore previous desktop
-
-(add-hook 'spacemacs-post-user-config-hook
-          (lambda ()
-            (desktop-save-mode)
-            (desktop-read)))
-
 ;; *** dired sorting by directories first
 
 (setq dired-listing-switches "-alGh --group-directories-first")
