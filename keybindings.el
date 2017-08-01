@@ -43,7 +43,6 @@
 
 ;; switch to other frame = s-a
 (global-set-key (kbd "s-a") 'other-frame)
-(global-set-key (kbd "s-w") 'magit-status)
 
 ;; **** indirect buffers
 
@@ -95,9 +94,13 @@
 (global-set-key (kbd "H-3") 'split-window-right)
 
 
-;; ** save
+;; ** save & vc
 
 (global-set-key (kbd "s-s") 'save-some-buffers)
+
+;; disable annoying s-w kill-frame keybind
+;; and replace it with useful magit-status shortcut
+(global-set-key (kbd "s-w") 'magit-status)
 
 ;; ** dired
 
