@@ -10,6 +10,11 @@
 (setq w32-pass-apps-to-system nil)
 (setq w32-apps-modifier 'hyper) ; Menu/App key
 
+;; on a mac: make the appkey on my external windows keyboard 
+;; that has switched the appkey to Fn using karabiner
+;; function as super modifier
+(setq ns-function-modifier 'hyper)
+
 ;; ** cb-
 
 ;; bind cb-throw to H-f
@@ -35,6 +40,9 @@
 
 ;; switch to other window = H-a
 (global-set-key (kbd "H-a") 'other-window)
+
+;; switch to other frame = s-a
+(global-set-key (kbd "s-a") 'other-frame)
 
 ;; **** indirect buffers
 

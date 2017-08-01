@@ -140,3 +140,11 @@
 ;; (setq exec-path '("c:/msys32/mingw32/bin" "C:/msys32/usr/local/bin" "C:/msys32/usr/bin" "C:/msys32/usr/bin" "C:/Windows/System32" "C:/Windows" "C:/Windows/System32/Wbem" "C:/Windows/System32/WindowsPowerShell/v1.0/" "C:/msys32/usr/bin/site_perl" "C:/msys32/usr/bin/vendor_perl" "C:/msys32/usr/bin/core_perl" "c:/msys32/mingw32/libexec/emacs/25.1/i686-w64-mingw32"))
 ;; (getenv "PATH")
 ;; (insert exec-path)
+
+;; ** Mac path
+
+;; fixes dired display failure
+;; by switching from default mac ls to brew coreutils
+(when (eq system-type 'darwin)
+  (require 'ls-lisp)
+  (setq insert-directory-program "gls"))
