@@ -43,6 +43,7 @@
 
 ;; switch to other frame = s-a
 (global-set-key (kbd "s-a") 'other-frame)
+(global-set-key (kbd "s-w") 'magit-status)
 
 ;; **** indirect buffers
 
