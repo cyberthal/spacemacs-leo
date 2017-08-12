@@ -22,7 +22,7 @@
 
 ;; *** dired sorting by directories first
 
-(setq dired-listing-switches "-alGh --group-directories-first")
+(setq dired-listing-switches "-alGhU --group-directories-first")
 
 (add-hook
  'dired-before-readin-hook
