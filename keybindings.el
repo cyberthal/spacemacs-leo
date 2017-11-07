@@ -41,8 +41,8 @@
 ;; switch to other window = H-a
 (global-set-key (kbd "H-a") 'other-window)
 
-;; switch to other frame = s-a
-(global-set-key (kbd "s-a") 'other-frame)
+;; switch to other frame = s-;
+(global-set-key (kbd "s-;") 'other-frame)
 
 ;; **** indirect buffers
 
@@ -104,4 +104,4 @@
 
 ;; ** dired
 
-(global-set-key (kbd "s-d") 'ido-dired)
+(global-set-key (kbd "s-i") 'ido-dired)
