@@ -20,6 +20,9 @@
                                        (unknown . question-mark)))
 
 
+;; **** golden ratio mode on
+
+(spacemacs/toggle-golden-ratio-on)
 ;; *** dired sorting by directories first
 
 (setq dired-listing-switches "-alGhU --group-directories-first")
