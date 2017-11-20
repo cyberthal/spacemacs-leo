@@ -22,7 +22,9 @@
 
 ;; **** golden ratio mode on
 
-(spacemacs/toggle-golden-ratio-on)
+(with-eval-after-load 'org
+  (spacemacs/toggle-golden-ratio-on)
+  )
 ;; *** dired sorting by directories first
 
 (setq dired-listing-switches "-alGhU --group-directories-first")
@@ -38,7 +40,7 @@
 (add-hook 'ahk-mode-hook 'outline-minor-mode)
 
 ;; ** org-mode & bbcodeize
-(with-eval-after-load 'org 
+(with-eval-after-load 'org
 ;; *** make org start with wrapped lines.  works.
 (setq org-startup-truncated nil)
 (setq line-move-visual nil)
