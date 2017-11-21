@@ -27,8 +27,17 @@
   )
 ;; *** dired sorting by directories first
 
-(setq dired-listing-switches "-alGhU --group-directories-first")
+;; Mac
+(when (string-equal system-type "darwin")
+  (setq dired-listing-switches "-alGhU --group-directories-first")
+  )
 
+;; Linux
+(when (string-equal system-type "gnu/linux")
+  (setq dired-listing-switches "-alGh --group-directories-first")
+  )
+
+;; remote?
 (add-hook
  'dired-before-readin-hook
  (lambda ()
