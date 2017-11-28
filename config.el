@@ -22,7 +22,7 @@
 
 ;; **** golden ratio mode on
 
-(with-eval-after-load 'golden-ratio
+(with-eval-after-load 'org
   (spacemacs/toggle-golden-ratio-on)
   )
 ;; *** dired sorting by directories first
