@@ -144,8 +144,8 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+   dotspacemacs-default-font '("Inconsolata"
+                               :size 22
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -399,13 +399,3 @@ you should place your code here."
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3")
  '(vc-follow-symlinks (quote ask)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#292b2e" :foreground "#b2b2b2" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 200 :width normal :foundry "nil" :family "Menlo"))))
- '(fixed-pitch ((t (:family "Consolas"))))
- '(org-default ((t (:inherit nil))))
- '(variable-pitch ((t (:slant normal :weight normal :height 1.3 :foundry "outline" :family "Times New Roman")))))
-
