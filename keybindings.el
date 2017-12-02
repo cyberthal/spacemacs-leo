@@ -4,8 +4,8 @@
 ;; ** enable hyper and super keys
 
 ;; make PC keyboard's Win key or other to type Super or Hyper, for emacs running on Windows.
-; (setq w32-pass-lwindow-to-system nil)
-; (setq w32-lwindow-modifier 'super) ; Left Windows key
+(setq w32-pass-lwindow-to-system nil)
+(setq w32-lwindow-modifier 'super) ; Left Windows key
 
 (setq w32-pass-apps-to-system nil)
 (setq w32-apps-modifier 'hyper) ; Menu/App key
