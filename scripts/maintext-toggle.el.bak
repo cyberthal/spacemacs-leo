@@ -22,6 +22,8 @@
     (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/4-Object/" )
     (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/5-Action/" )
     (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/7-Scratch/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/9-noMenclature/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/persInter/" )
     )
 
 )
