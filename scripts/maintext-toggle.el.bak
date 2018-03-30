@@ -16,14 +16,12 @@
     ;; cuz it's too big.  and because I need a place to pseudo-archive surplus TODO/DONE entries
     ;; indent two spaces or toggle script won't work
     (setq org-agenda-files nil)
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/1-Time/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/2-People/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/3-Location/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/4-Object/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/5-Action/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/7-Scratch/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/9-noMenclature/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-main-text/1-human/persInter/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/1-persInter/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/2-Time/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/3-People/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/4-Object/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/5-Location/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/6-Action/" )
     )
 
 )
