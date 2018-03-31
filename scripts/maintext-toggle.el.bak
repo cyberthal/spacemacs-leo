@@ -1,6 +1,8 @@
 ;; * Toggle whether maintext autoloads
 ;; * Set the search locations
 
+;; ** for org-agenda
+
 (defun cb-clear-org-agenda ()
   "Empties org-agenda-files"
   (interactive)
@@ -12,9 +14,8 @@
   (interactive)
 
   (with-eval-after-load 'org
-    ;; add every dir but topical
-    ;; cuz it's too big.  and because I need a place to pseudo-archive surplus TODO/DONE entries
     ;; indent two spaces or toggle script won't work
+    ;; Excludes /deferred and /notes to avoid agenda lag.
     (setq org-agenda-files nil)
     (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/1-persInter/" )
     (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/2-Time/" )
@@ -28,5 +29,14 @@
 )
 
 (cb-refresh-org-agenda)
+
+;; ** for text searches
+
+;; ensures that e.g. links to files in /notes can be found without resorting to grep
+(setq org-agenda-text-search-extra-files
+      (directory-files-recursively "~/1-mansort/1-Textmind/1-Human/7-Notes/" ".org")
+      )
+
+;; * footer
 
 (provide 'maintext-toggle)
