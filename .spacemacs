@@ -325,14 +325,13 @@ you should place your code here."
   ;; Dired
   (require 'dired-x) ; Enable dired-x
   (require 'dired+)  ; Enable dired+
-
-  (require 'git-annex)
-
   ;; dired-quick-sort activate
   ;; (require 'dired-quick-sort)
   ;; (dired-quick-sort-setup)
 
-  ;; load org agenda files
+  (require 'git-annex)
+
+  ;; add Textmind to org-agenda scope
   (push "~/.emacs.d/private/personal/" load-path)
   (require 'maintext-toggle)
 
