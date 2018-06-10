@@ -1,0 +1,5 @@
+* notes for not-windows.sh
+
+The deploy script is untested as of [2018-06-10 Sun 13:47]
+
+I sorted to a deeper path, so check the path /../ offsets first, should it fail.

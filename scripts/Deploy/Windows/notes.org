@@ -1,0 +1,7 @@
+* Instructions
+
+For reasons unknown, symlinking the /personal layer doesn't work, even though outshine and cyborganize layers symlink fine.
+
+So instead of symlinking it, copy the whole directory in.
+
+The deploy script is untested as of [2018-06-10 Sun 13:47]
