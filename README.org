@@ -4,20 +4,47 @@
 [[img/personal.png]]
 
 # TOC links should be GitHub style anchors.
-* Table of Contents                                        :TOC_4_gh:noexport:
- - [[#description][Description]]
- - [[#install][Install]]
- - [[#key-bindings][Key bindings]]
- - [[#raw-notes][Raw notes]]
+* Table of Contents                                       :TOC_4_gh:noexport:
+- [[#description][Description]]
+- [[#install][Install]]
+  - [[#on-windows][on Windows]]
+    - [[#add-personal-to-your-private-layers-directory][Add Personal to your private layers directory]]
+    - [[#add-personal-to-your-spacemacs][Add Personal to your =~/.spacemacs=]]
+  - [[#on-nix][on *Nix]]
+    - [[#add-personal-to-your-private-layers-directory-1][Add Personal to your private layers directory]]
+    - [[#add-personal-to-your-spacemacs-1][Add Personal to your =~/.spacemacs=]]
+- [[#key-bindings][Key bindings]]
+- [[#raw-old-notes][Raw old notes]]
 
 * Description
 This layer does wonderful things:
   - thing01
 
 * Install
-To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-add =personal= to the existing =dotspacemacs-configuration-layers= list in this
-file.
+** on Windows
+
+*** Add Personal to your private layers directory
+
+Personal's deploy script assumes your Spacemacs is installed in the default directory.
+
+Run =./scripts/Deploy/Windows/deploy.sh=
+
+*** Add Personal to your =~/.spacemacs=
+
+Add =personal= to the existing =dotspacemacs-configuration-layers= list.
+
+** on *Nix
+
+*** Add Personal to your private layers directory
+
+Personal's deploy script assumes your Spacemacs is installed in the default directory.
+
+Run =./scripts/Deploy/not-windows.sh=
+
+*** Add Personal to your =~/.spacemacs=
+
+Add =personal= to the existing =dotspacemacs-configuration-layers= list.
+
 
 * Key bindings
 
@@ -30,7 +57,7 @@ file.
 # [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
 # If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
 
-* Raw notes
+* Raw old notes
 
 Manually symlink the .spacemacs file into the proper ~/ location 
 I should probably write some kinda script for that.  whatev.
