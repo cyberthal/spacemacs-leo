@@ -29,7 +29,7 @@
 
 ;; Mac
 (when (string-equal system-type "darwin")
-  (setq dired-listing-switches "-alGhU --group-directories-first")
+  (setq dired-listing-switches "-ADhl --group-directories-first")
   )
 
 ;; Linux
