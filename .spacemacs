@@ -145,7 +145,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Inconsolata"
-                               :size 22
+                               :size 24
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -324,6 +324,7 @@ you should place your code here."
 
   ;; Dired
   (require 'dired-x) ; Enable dired-x
+  (setq-default dired-omit-files-p t) ; Buffer-local variable
   (push "~/.emacs.d/private/local/dired-plus/" load-path)
   (require 'dired+)  ; Enable dired+
   ;; dired-quick-sort activate
@@ -375,7 +376,7 @@ you should place your code here."
    (quote
     ((interactive cider-repl-mode clojure-mode clojurec-mode clojurescript-mode clojurex-mode common-lisp-mode eshell-mode geiser-repl-mode inf-clojure-mode inferior-emacs-lisp-mode inferior-lisp-mode inferior-scheme-mode lisp-interaction-mode lisp-mode monroe-mode racket-mode racket-repl-mode scheme-interaction-mode scheme-mode slime-repl-mode stumpwm-mode))))
  '(tool-bar-mode nil)
- '(truncate-lines t)
+ '(truncate-lines nil)
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote
