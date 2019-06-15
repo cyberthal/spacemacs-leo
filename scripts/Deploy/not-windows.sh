@@ -1,11 +1,12 @@
 #!/bin/bash
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}")" && cd ../../ && pwd )"
 
-rm -f ~/.spacemacs
-ln -s $SCRIPT_DIR/../../.spacemacs ~/
+LINK_NAME=${SCRIPT_DIR##*/}
+link_name=$(echo "$LINK_NAME" | tr '[:upper:]' '[:lower:]')
 
-rm -rf ~/.emacs.d/private/personal
-ln -s $SCRIPT_DIR/../../ ~/.emacs.d/private/personal
+ln -sf $SCRIPT_DIR/.spacemacs ~/
 
-cp $SCRIPT_DIR/../maintext-toggle.el.bak $SCRIPT_DIR/../../maintext-toggle.el
+ln -sf $SCRIPT_DIR/ ~/.emacs.d/private/$link_name
+
+cp -f $SCRIPT_DIR/scripts/maintext-toggle.el.bak $SCRIPT_DIR/maintext-toggle.el
