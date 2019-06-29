@@ -17,7 +17,7 @@
     ;; indent two spaces or toggle script won't work
     ;; Excludes /deferred and /notes to avoid agenda lag.
     (cb-clear-org-agenda)
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/1-persInter/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/1-Persinter/" )
     (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/2-Time/" )
     (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/3-Names/" )
     (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/4-Object/" )
