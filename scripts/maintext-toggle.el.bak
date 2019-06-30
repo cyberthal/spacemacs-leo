@@ -17,13 +17,7 @@
     ;; indent two spaces or toggle script won't work
     ;; Excludes /deferred and /notes to avoid agenda lag.
     (cb-clear-org-agenda)
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/1-Persinter/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/2-Time/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/3-Names/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/4-Object/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/5-Location/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/6-Action/" )
-    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Human/8-Scratch/" )
+    (load-org-agenda-files-recursively "~/1-mansort/1-Textmind/1-Agenda" )
     )
 
 )
@@ -34,7 +28,7 @@
 
 ;; ensures that e.g. links to files in /notes can be found without resorting to grep
 (setq org-agenda-text-search-extra-files
-      (directory-files-recursively "~/1-mansort/1-Textmind/1-Human/7-Background/" ".org")
+      (directory-files-recursively "~/1-mansort/1-Textmind/2-Linked" ".org")
       )
 
 ;; * footer
