@@ -1,4 +1,4 @@
-* Instructions
+* deploy-windows.sh
 
 For reasons unknown, symlinking the /personal layer doesn't work, even though outshine and cyborganize layers symlink fine.
 
