@@ -14,7 +14,6 @@
     - [[#add-personal-to-your-private-layers-directory-1][Add Personal to your private layers directory]]
     - [[#add-personal-to-your-spacemacs-1][Add Personal to your =~/.spacemacs=]]
 - [[#key-bindings][Key bindings]]
-- [[#raw-old-notes][Raw old notes]]
 
 * Description
 This layer does wonderful things:
@@ -56,13 +55,3 @@ Add =personal= to the existing =dotspacemacs-configuration-layers= list.
 # [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
 # [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
 # If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
-
-* Raw old notes
-
-Manually symlink the .spacemacs file into the proper ~/ location 
-I should probably write some kinda script for that.  whatev.
-It would have to be in elisp to ensure that the proper env variable for ~/ was used. 
-I am not sure how to do file operations in elisp.
-and I am not set up to learn at the moment.  defer it.  
-
-also, rename the directory you cloned from spacemacs-personal to personal

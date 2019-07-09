@@ -63,7 +63,6 @@
 ;; Use global IDs (for unique links)
 (require 'org-id)
 
-
 ;; *** display
 
 (dolist (face '(org-block-begin-line 

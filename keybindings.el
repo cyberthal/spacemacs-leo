@@ -22,8 +22,11 @@
 
 ;; bind cb-dthrow to H-g
 (global-set-key (kbd "H-g") 'cb-throw-up)
+
 ;; ** org-mode
 (with-eval-after-load 'org 
+
+;; *** org-todo
 
 ;; bind org-todo to H-t
 (global-set-key (kbd "H-t") 'org-todo)
@@ -38,6 +41,8 @@
 
 ;; *** outline
 
+;; **** switching windows/frames
+
 ;; switch to other window = H-a
 (global-set-key (kbd "H-a") 'other-window)
 
@@ -51,7 +56,6 @@
 
 ;; make an indirect buffer other window
 (global-set-key (kbd "H-b") 'clone-indirect-buffer-other-window)
-
 
 ;; **** heading movement
 
@@ -92,7 +96,6 @@
 
 ;; split window vertically
 (global-set-key (kbd "H-3") 'split-window-right)
-
 
 ;; ** save & vc
 
