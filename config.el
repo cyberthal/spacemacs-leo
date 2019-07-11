@@ -166,7 +166,7 @@
 
 ;; set magit executable for CentOS
 (when (eq system-type 'gnu/linux)
-  (when (file-exists-p /opt/rh/rh-git29/root/usr/bin/git)
+  (when (file-exists-p "/opt/rh/rh-git29/root/usr/bin/git")
     (setq magit-git-executable "/opt/rh/rh-git29/root/usr/bin/git")
     )
 )
