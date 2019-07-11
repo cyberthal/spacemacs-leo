@@ -90,6 +90,3 @@ flycheck_*.el
 
 # git
 .gitconfig
-
-#leo3
-maintext-toggle.el
