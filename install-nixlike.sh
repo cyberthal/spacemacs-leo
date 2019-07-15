@@ -13,10 +13,10 @@ wget -m https://www.emacswiki.org/emacs/download/dired%2b.el -O ~/.emacs.d/priva
 # find path to repo
 SCRIPT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 
-# link .init.el
+# link init.el
 mkdir ~/.spacemacs.d/
-rm -f ~/.spacemacs.d/.init.el
-ln -s $SCRIPT_DIR/.init.el ~/.spacemacs.d/
+rm -f ~/.spacemacs.d/init.el
+ln -s $SCRIPT_DIR/init.el ~/.spacemacs.d/
 
 # link personal directory
 LINK_NAME="personal"
