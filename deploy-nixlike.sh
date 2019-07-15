@@ -8,8 +8,9 @@ SCRIPT_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 
 LINK_NAME="personal"
 
-ln -sf $SCRIPT_DIR/.spacemacs ~/
+rm -f ~/.spacemacs
+ln -s $SCRIPT_DIR/.spacemacs ~/
 
-rm ~/.emacs.d/private/$LINK_NAME
+rm -f ~/.emacs.d/private/$LINK_NAME
 # without the rm, the ln will inexplicably link at SCRIPT_DIR if target already exists.
-ln -sf $SCRIPT_DIR/ ~/.emacs.d/private/$LINK_NAME
+ln -s $SCRIPT_DIR/ ~/.emacs.d/private/$LINK_NAME
