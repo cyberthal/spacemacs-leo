@@ -15,13 +15,13 @@
 ;; function as super modifier
 (setq ns-function-modifier 'hyper)
 
-;; ** cb-
+;; ** ts-
 
-;; bind cb-throw to H-f
-(global-set-key (kbd "H-f") 'cb-throw)
+;; bind ts-throw to H-f
+(global-set-key (kbd "H-f") 'ts-throw)
 
-;; bind cb-dthrow to H-g
-(global-set-key (kbd "H-g") 'cb-throw-up)
+;; bind ts-dthrow to H-g
+(global-set-key (kbd "H-g") 'ts-throw-up)
 
 ;; ** org-mode
 (with-eval-after-load 'org 
@@ -33,7 +33,7 @@
 
 ;; *** timestamps
 
-(global-set-key (kbd "H-SPC") 'cb-org-time-and-date-stamp-inactive)
+(global-set-key (kbd "H-SPC") 'ts-org-time-and-date-stamp-inactive)
 (global-set-key (kbd "s-SPC") 'org-time-stamp)
 
 ) ; end org section

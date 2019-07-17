@@ -123,7 +123,7 @@
 
 (when (string-equal system-type "windows-nt")
   (let (
-        (cb-NT-extra-paths
+        (ts-NT-extra-paths
           '(
             "C:/cygwin/usr/local/bin"
             "C:/cygwin/usr/bin"
@@ -138,11 +138,11 @@
             (concat 
              (getenv "PATH")
              ";"
-             (mapconcat 'identity cb-NT-extra-paths ";")
+             (mapconcat 'identity ts-NT-extra-paths ";")
              )
             )
     (setq exec-path
-          (append exec-path cb-NT-extra-paths)
+          (append exec-path ts-NT-extra-paths)
           )
         )
   (setq magit-git-executable "c:/Program Files (x86)/Git/bin/git.exe")

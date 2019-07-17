@@ -55,7 +55,7 @@ values."
      autohotkey
      outshine
      personal
-     cyborganize
+     treesort
      ruby
      yaml
      windows-scripts
