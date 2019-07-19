@@ -1,23 +1,31 @@
 ;; * funcs.el in private/personal layer
 
-;; ** C-c k QUICK KILL
+;; ** Insert inactive timestamp of current time
 
-;; faster scratch file deletion - defining the function
-(defun delete-this-buffer-and-file ()
-  "Removes file connected to current buffer and kills buffer."
+(defun ts-org-time-and-date-stamp-inactive () 
+  "Insert inactive timestamp of current time"
+
+  ;; Calls org-time-stamp-inactive with universal prefix
   (interactive)
-  (let ((filename (buffer-file-name))
-        (buffer (current-buffer))
-        (name (buffer-name)))
-    (if (not (and filename (file-exists-p filename)))
-        (error "Buffer '%s' is not visiting a file!" name)
-      (when (yes-or-no-p "Are you sure you want to remove this file? ")
-        (delete-file filename)
-        (kill-buffer buffer)
-        (message "File '%s' successfully removed" filename)))))
+  (org-insert-time-stamp (current-time) t t)
+  )
 
-;; bound function to C-c k
-(global-set-key (kbd "C-c k") 'delete-this-buffer-and-file) 
+;; ** ts-checklist-to-not-done
 
+(defun ts-checklist-to-not-done
+    ()
+  "Replaces all checklist X with SPACE"
+  (interactive)
 
+  (save-excursion
+    (while (search-forward "[X]" nil t)
+      (replace-match "[ ]" nil t))
+    )
+  )
+
+;; Org-Mode: "boxes" Advance down org-mode checklist with C-S-n
+(fset 'boxes
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
+;; binding it to a handy key, since as a command it won't macro repeat
+(global-set-key (kbd "C-S-n") 'boxes)
 
