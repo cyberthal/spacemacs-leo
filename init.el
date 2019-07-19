@@ -53,7 +53,6 @@ values."
      ;; syntax-checking
      ;; version-control
      autohotkey
-     outshine
      personal
      treesort
      ruby
@@ -66,7 +65,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(dired+ bbcode-mode magit-annex git-annex dired-quick-sort)
+   dotspacemacs-additional-packages '(dired+ bbcode-mode magit-annex git-annex dired-quick-sort outshine)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -312,6 +311,13 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  ;; To define the outline-minor-mode-prefix key before the package is loaded
+  (defvar outline-minor-mode-prefix (kbd "H-c"))
+  ;; Setup outshine
+  (add-hook 'outline-minor-mode-hook 'outshine-mode)
+  (add-hook 'prog-mode-hook 'outline-minor-mode)
+
   )
 
 (defun dotspacemacs/user-config ()
