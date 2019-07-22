@@ -94,7 +94,9 @@
 (global-set-key (kbd "H-3") 'split-window-right)
 
 ;; projectile prefix key
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(with-eval-after-load 'projectile
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  )
 ;; ** save & vc
 
 (global-set-key (kbd "s-s") 'save-some-buffers)
