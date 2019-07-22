@@ -15,16 +15,12 @@
 ;; function as super modifier
 (setq ns-function-modifier 'hyper)
 
-;; ** ts-
+;; ** Treesort
 
-;; bind ts-throw to H-f
 (global-set-key (kbd "H-f") 'ts-throw)
-
-;; bind ts-dthrow to H-g
 (global-set-key (kbd "H-g") 'ts-throw-up)
-
-;; bound C-c k QUICK KILL to C-c k
 (global-set-key (kbd "C-c k") 'ts-delete-this-buffer-and-file) 
+(global-set-key (kbd "s-n") 'ts-pipify-word-list)
 
 ;; ** org-mode
 (with-eval-after-load 'org 
