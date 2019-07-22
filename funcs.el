@@ -31,7 +31,7 @@
 
 ;; ** Textmind startup
 
-(defun ts-textmind-startup
+(defun ts-textmind-startup ()
     (interactive)
 
   (spacemacs/toggle-fullscreen-frame)
