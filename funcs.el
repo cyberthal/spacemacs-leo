@@ -29,3 +29,11 @@
 ;; binding it to a handy key, since as a command it won't macro repeat
 (global-set-key (kbd "C-S-n") 'boxes)
 
+;; ** Textmind startup
+
+(defun ts-textmind-startup
+    (interactive)
+
+  (spacemacs/toggle-fullscreen-frame)
+  (make-frame)
+  (persp-load-state-from-file "Textmind-main"))
