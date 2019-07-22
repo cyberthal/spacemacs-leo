@@ -21,21 +21,18 @@
 (global-set-key (kbd "H-g") 'ts-throw-up)
 (global-set-key (kbd "C-c k") 'ts-delete-this-buffer-and-file) 
 (global-set-key (kbd "s-n") 'ts-pipify-word-list)
+(global-set-key (kbd "C-c l") 'ts-store-link-hide-drawer)
 
 ;; ** org-mode
-(with-eval-after-load 'org 
 
-;; *** org-todo
+(with-eval-after-load 'org
 
-;; bind org-todo to H-t
-(global-set-key (kbd "H-t") 'org-todo)
+  (global-set-key (kbd "H-t") 'org-todo)
 
-;; *** timestamps
+  (global-set-key (kbd "H-SPC") 'ts-org-time-and-date-stamp-inactive)
+  (global-set-key (kbd "s-SPC") 'org-time-stamp)
+  )
 
-(global-set-key (kbd "H-SPC") 'ts-org-time-and-date-stamp-inactive)
-(global-set-key (kbd "s-SPC") 'org-time-stamp)
-
-) ; end org section
 ;; ** navigation
 
 ;; *** outline
@@ -69,7 +66,7 @@
 
 ;; **** narrow/widen visible region
 
-(with-eval-after-load 'org 
+(with-eval-after-load 'org
 ;; bind org-narrow-to-subtree to H-d
 (global-set-key (kbd "H-d") 'org-narrow-to-subtree)
 )
