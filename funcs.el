@@ -36,4 +36,5 @@
 
   (spacemacs/toggle-fullscreen-frame)
   (make-frame)
+  (spacemacs/toggle-fullscreen-frame)
   (persp-load-state-from-file "Textmind-main"))
