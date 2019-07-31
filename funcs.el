@@ -201,21 +201,3 @@
   (org-narrow-to-subtree)
   (goto-char (line-end-position))
   )
-;; **** duplicate heading to other window DONE
-
-(defun ts-duplicate-heading-to-other-window ()
-  "Insert heading at point to the bottom of the other window."
-  (interactive)
-
-  (save-restriction
-    (org-narrow-to-subtree)
-    (ts-ends-n-newlines 1)
-    (let ((home-buffer (current-buffer)))
-      (select-window (next-window)) ; target
-      (ts-ends-n-newlines 2)
-      (goto-char (point-max))
-      (insert-buffer-substring home-buffer))
-    (select-window (previous-window)) ; home
-    (widen)
-    )
-  )
