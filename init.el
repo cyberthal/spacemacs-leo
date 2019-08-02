@@ -331,7 +331,7 @@ you should place your code here."
   ;; Dired
   (require 'dired-x) ; Enable dired-x
   (setq-default dired-omit-files-p t) ; Buffer-local variable
-  (push "~/.emacs.d/private/local/dired-plus/" load-path)
+  (load-file "~/.emacs.d/private/local/dired-plus/dired+.el")
   (require 'dired+)  ; Enable dired+
   ;; dired-quick-sort activate
   ;; (require 'dired-quick-sort)

@@ -125,7 +125,8 @@
 
 ) 
 
-;; ** Windows path & exec-path
+;; ** by OS
+;; *** Windows path & exec-path
 
 ;; adapted from Xah's code here:
 ;; http://ergoemacs.org/emacs/emacs_env_var_paths.html
@@ -163,7 +164,7 @@
 ;; (getenv "PATH")
 ;; (insert exec-path)
 
-;; ** Mac path
+;; *** Mac path
 
 ;; fixes dired display failure
 ;; by switching from default mac ls to brew coreutils
@@ -171,7 +172,7 @@
   (require 'ls-lisp)
   (setq insert-directory-program "gls"))
 
-;; ** CentOS git path
+;; *** CentOS git path
 
 ;; set magit executable for CentOS
 (when (eq system-type 'gnu/linux)
