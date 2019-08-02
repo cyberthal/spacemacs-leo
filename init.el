@@ -412,4 +412,4 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(org-date ((t (:foreground "#7590db" :underline t :height 0.8 :width normal))))
  '(org-special-keyword ((t (:foreground "#bc6ec5" :height 0.7 :width condensed))))
- '(variable-pitch ((t (:family "Times New Roman")))))
+ '(variable-pitch ((t (:family "Palatino")))))
