@@ -121,6 +121,17 @@
 ;; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
+;; Enable encryption
+(setq org-mobile-use-encryption t)
+;; Set a password
+(setq org-mobile-encryption-password
+      (condition-case nil
+          (with-temp-buffer
+         (insert-file-contents "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Mobileorg/Password.txt")
+         (buffer-string))
+        (user-error "%s" "MobileOrg password file not found")
+        )
+      )
 ;; *** end org-mode block
 
 ) 
