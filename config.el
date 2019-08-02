@@ -1,5 +1,5 @@
 ;; * config.el of private/personal layer
-;; * top
+;; * offset
 ;; ** ergonomics
 ;; *** visual
 ;; **** nyan-mode
@@ -112,11 +112,21 @@
 (push "~/.emacs.d/private/personal/bbcode/" load-path)
 (require 'bbcodeize)
 
+;; *** MobileOrg
+
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/1-Mansort/1-Textmind")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/1-Mansort/1-Textmind/2-Linked/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+
 ;; *** end org-mode block
 
 ) 
 
-;; ** Windows path & exec-path
+;; ** by OS
+;; *** Windows path & exec-path
 
 ;; adapted from Xah's code here:
 ;; http://ergoemacs.org/emacs/emacs_env_var_paths.html
@@ -154,7 +164,7 @@
 ;; (getenv "PATH")
 ;; (insert exec-path)
 
-;; ** Mac path
+;; *** Mac path
 
 ;; fixes dired display failure
 ;; by switching from default mac ls to brew coreutils
@@ -162,7 +172,7 @@
   (require 'ls-lisp)
   (setq insert-directory-program "gls"))
 
-;; ** CentOS git path
+;; *** CentOS git path
 
 ;; set magit executable for CentOS
 (when (eq system-type 'gnu/linux)
