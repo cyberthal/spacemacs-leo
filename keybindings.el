@@ -19,9 +19,9 @@
 
 (global-set-key (kbd "H-f") 'ts-throw)
 (global-set-key (kbd "H-g") 'ts-throw-up)
-(global-set-key (kbd "C-c k") 'ts-delete-this-buffer-and-file) 
+(global-set-key (kbd "C-c k") 'ts-delete-this-buffer-and-file)
 (global-set-key (kbd "s-n") 'ts-pipify-word-list)
-(global-set-key (kbd "C-c l") 'ts-store-link-hide-drawer)
+(global-set-key (kbd "C-c l") 'ts-store-link-fold-drawer)
 
 ;; ** org-mode
 

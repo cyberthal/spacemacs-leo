@@ -84,7 +84,7 @@
              (select-window (next-window))
              (goto-char (point-max))
              (insert "\n")
-             (select-window (next-window))
+             (other-window -1) ; ensures that golden-ratio enlarges home window
              (org-previous-visible-heading 1)
              (org-cycle)
              (org-narrow-to-subtree)

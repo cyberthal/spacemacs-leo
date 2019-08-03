@@ -87,8 +87,6 @@
 
 ;; Collect all .org from my Org directory and subdirs
 
-;; **** setup the search function
-
 (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'") ; default value
 (setq org-agenda-files nil)
 (defun load-org-agenda-files-recursively (dir) "Find all directories in DIR."
