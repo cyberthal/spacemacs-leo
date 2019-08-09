@@ -88,6 +88,7 @@
              (org-previous-visible-heading 1)
              (org-cycle)
              (org-narrow-to-subtree)
+             (outline-show-all)
              )
            )
         )
