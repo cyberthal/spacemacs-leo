@@ -342,6 +342,12 @@ you should place your code here."
   ;; add Textmind to org-agenda scope
   (push "~/.emacs.d/private/personal/" load-path)
   (require 'maintext-toggle)
+
+  ;; add line spacing to org-mode
+  (defun ts-space-lines ()
+    (setq line-spacing 5)
+    )
+  (add-hook 'org-mode-hook 'ts-space-lines)
   )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
