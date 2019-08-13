@@ -25,7 +25,22 @@
 (with-eval-after-load 'org
   (spacemacs/toggle-golden-ratio-on)
   )
-;; *** dired sorting by directories first
+;; *** dired
+;; **** misc
+
+(add-to-load-path
+ (concat user-emacs-directory "private/local/dired-plus/")
+ )
+(require 'dired+)
+
+(require 'dired-x) ; Enable dired-x
+(setq-default dired-omit-files-p t) ; Buffer-local variable
+
+;; dired-quick-sort activate
+;; (require 'dired-quick-sort)
+;; (dired-quick-sort-setup)
+
+;; **** dired sorting by directories first
 
 ;; Mac
 (when (string-equal system-type "darwin")
@@ -58,6 +73,13 @@
 (add-hook 'org-mode-hook #'toggle-word-wrap)
 
 
+;; *** line spacing
+
+;; add line spacing to org-mode
+(defun ts-space-lines ()
+  (setq line-spacing 5)
+  )
+(add-hook 'org-mode-hook 'ts-space-lines)
 ;; *** use org UIUDs
 
 ;; Use global IDs (for unique links)
@@ -191,3 +213,9 @@
     (setq magit-git-executable "/opt/rh/rh-git29/root/usr/bin/git")
     )
 )
+
+;; ** Textmind
+
+;; add Textmind to org-agenda scope
+(push "~/.emacs.d/private/personal/" load-path)
+(require 'maintext-toggle)

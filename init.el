@@ -325,25 +325,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  ;; Dired
-  (require 'dired-x) ; Enable dired-x
-  (setq-default dired-omit-files-p t) ; Buffer-local variable
-  (require 'dired+)  ; Enable dired+
-  ;; dired-quick-sort activate
-  ;; (require 'dired-quick-sort)
-  ;; (dired-quick-sort-setup)
-
-  (require 'git-annex)
-
-  ;; add Textmind to org-agenda scope
-  (push "~/.emacs.d/private/personal/" load-path)
-  (require 'maintext-toggle)
-
-  ;; add line spacing to org-mode
-  (defun ts-space-lines ()
-    (setq line-spacing 5)
-    )
-  (add-hook 'org-mode-hook 'ts-space-lines)
+  (require 'git-annex) ; need magit-annex too?
   )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
