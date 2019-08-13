@@ -31,35 +31,30 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     php
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+
+     ;; dev
      html
-     javascript
+     emacs-lisp
+     syntax-checking
+     git
+
+     ;; emacs
      helm
      org
-     ;; auto-completion
      better-defaults
-     emacs-lisp
-     markdown
-     git
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
-     autohotkey
+     (colors :variables colors-enable-nyan-cat-progress-bar t)
+
+     ;; text
+     spell-checking
+
+     ;; my
      personal
      treesort
-     ruby
-     yaml
-     windows-scripts
-     (colors :variables colors-enable-nyan-cat-progress-bar t)
-     
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
