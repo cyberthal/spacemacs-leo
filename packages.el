@@ -25,12 +25,9 @@
 
 (defconst personal-packages
   '((dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
-    (treesort :location (if (string-equal server-name "Dev")
-                            (recipe :fetcher github :repo "cyberthal/treesort" :branch "develop")
-                          (recipe :fetcher github :repo "cyberthal/treesort")
-                          )
-              )
+    (treesort :location (recipe :fetcher github :repo "cyberthal/treesort" :branch "develop"))
     )
+  )
   "The list of Lisp packages required by the personal layer.
 
 Each entry is either:
