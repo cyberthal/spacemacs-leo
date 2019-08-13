@@ -24,7 +24,9 @@
 ;;; Code:
 
 (defconst personal-packages
-  '()
+  '((dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
+    (treesort :location (recipe :fetcher github :repo "cyberthal/treesort" :branch "develop"))
+    )
   "The list of Lisp packages required by the personal layer.
 
 Each entry is either:
@@ -50,6 +52,15 @@ Each entry is either:
         `./local/PACKAGE/PACKAGE.el'
 
       - A list beginning with the symbol `recipe' is a melpa
-        recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
+        recipe.  See: https://github.com/milkypostman/melpa#recipe-format"
+
+  )
+
+(defun personal/init-dired+ ()
+ (use-package dired+)
+ )
+(defun personal/init-treesort ()
+ (use-package treesort)
+ )
 
 ;;; packages.el ends here

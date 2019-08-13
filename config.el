@@ -28,11 +28,6 @@
 ;; *** dired
 ;; **** misc
 
-(add-to-load-path
- (concat user-emacs-directory "private/local/dired-plus/")
- )
-(require 'dired+)
-
 (require 'dired-x) ; Enable dired-x
 (setq-default dired-omit-files-p t) ; Buffer-local variable
 
