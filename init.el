@@ -60,7 +60,9 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(dired+ bbcode-mode magit-annex git-annex dired-quick-sort outshine)
+   dotspacemacs-additional-packages '(bbcode-mode magit-annex git-annex dired-quick-sort outshine
+                                                  (dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus"))
+                                                  )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -326,7 +328,6 @@ you should place your code here."
   ;; Dired
   (require 'dired-x) ; Enable dired-x
   (setq-default dired-omit-files-p t) ; Buffer-local variable
-  (load-file "~/.emacs.d/private/local/dired-plus/dired+.el")
   (require 'dired+)  ; Enable dired+
   ;; dired-quick-sort activate
   ;; (require 'dired-quick-sort)
