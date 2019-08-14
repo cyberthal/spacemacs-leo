@@ -25,7 +25,6 @@
 
 (defconst personal-packages
   '((dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
-    (treesort :location (recipe :fetcher github :repo "cyberthal/treesort" :branch "develop"))
     )
 
   "The list of Lisp packages required by the personal layer.
@@ -59,9 +58,6 @@ Each entry is either:
 
 (defun personal/init-dired+ ()
  (use-package dired+)
- )
-(defun personal/init-treesort ()
- (use-package treesort)
  )
 
 ;;; packages.el ends here

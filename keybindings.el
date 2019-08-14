@@ -10,18 +10,18 @@
 (setq w32-pass-apps-to-system nil)
 (setq w32-apps-modifier 'hyper) ; Menu/App key
 
-;; on a mac: make the appkey on my external windows keyboard 
+;; on a mac: make the appkey on my external windows keyboard
 ;; that has switched the appkey to Fn using karabiner
 ;; function as super modifier
 (setq ns-function-modifier 'hyper)
 
 ;; ** Treesort
 
-(global-set-key (kbd "H-f") 'ts-throw)
-(global-set-key (kbd "H-g") 'ts-throw-up)
-(global-set-key (kbd "C-c k") 'ts-delete-this-buffer-and-file)
-(global-set-key (kbd "s-n") 'ts-pipify-word-list)
-(global-set-key (kbd "C-c l") 'ts-store-link-fold-drawer)
+(global-set-key (kbd "H-f") 'trs-throw)
+(global-set-key (kbd "H-g") 'trs-throw-up)
+(global-set-key (kbd "C-c k") 'trs-delete-this-buffer-and-file)
+(global-set-key (kbd "s-n") 'trs-pipify-word-list)
+(global-set-key (kbd "C-c l") 'trs-store-link-fold-drawer)
 
 ;; ** org-mode
 
@@ -29,7 +29,7 @@
 
   (global-set-key (kbd "H-t") 'org-todo)
 
-  (global-set-key (kbd "H-SPC") 'ts-org-time-and-date-stamp-inactive)
+  (global-set-key (kbd "H-SPC") 'trs-org-time-and-date-stamp-inactive)
   (global-set-key (kbd "s-SPC") 'org-time-stamp)
   )
 

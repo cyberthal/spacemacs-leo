@@ -3,26 +3,26 @@
 
 ;; ** for org-agenda
 
-(defun ts-clear-org-agenda ()
+(defun trs-clear-org-agenda ()
   "Empties org-agenda-files"
   (interactive)
   (setq org-agenda-files nil)
   )
 
-(defun ts-refresh-org-agenda ()
+(defun trs-refresh-org-agenda ()
   "Fixes broken agenda from new, moved or moved files."
   (interactive)
 
   (with-eval-after-load 'org
     ;; indent two spaces or toggle script won't work
     ;; Excludes /deferred and /notes to avoid agenda lag.
-    (ts-clear-org-agenda)
+    (trs-clear-org-agenda)
     (load-org-agenda-files-recursively "~/1-Mansort/1-Textmind/1-Agenda/" ) ; trailing slash required
     )
 
 )
 
-(ts-refresh-org-agenda)
+(trs-refresh-org-agenda)
 
 ;; ** for text searches
 

@@ -325,6 +325,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   (require 'git-annex) ; need magit-annex too?
+
+  (add-to-list 'load-path "~/1-Mansort/2-Other-text/Github/Emacs/My/Treesort/Dev")
+  (use-package treesort)
   )
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
