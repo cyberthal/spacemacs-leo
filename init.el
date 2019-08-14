@@ -42,6 +42,7 @@ values."
      emacs-lisp
      syntax-checking
      git
+     autohotkey ; because org-link search scope includes .ahk files
 
      ;; emacs
      helm
