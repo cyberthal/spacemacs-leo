@@ -82,9 +82,9 @@
 
 ;; *** display
 
-(dolist (face '(org-block-begin-line 
-                org-block-end-line 
-                org-verbatim 
+(dolist (face '(org-block-begin-line
+                org-block-end-line
+                org-verbatim
 ;;                org-block-background
                 org-table
                 ))
