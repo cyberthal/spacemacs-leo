@@ -71,10 +71,10 @@
 ;; *** line spacing
 
 ;; add line spacing to org-mode
-(defun ts-space-lines ()
+(defun trs-space-lines ()
   (setq line-spacing 5)
   )
-(add-hook 'org-mode-hook 'ts-space-lines)
+(add-hook 'org-mode-hook 'trs-space-lines)
 ;; *** use org UIUDs
 
 ;; Use global IDs (for unique links)
@@ -82,9 +82,9 @@
 
 ;; *** display
 
-(dolist (face '(org-block-begin-line 
-                org-block-end-line 
-                org-verbatim 
+(dolist (face '(org-block-begin-line
+                org-block-end-line
+                org-verbatim
 ;;                org-block-background
                 org-table
                 ))
@@ -161,7 +161,7 @@
 
 (when (string-equal system-type "windows-nt")
   (let (
-        (ts-NT-extra-paths
+        (trs-NT-extra-paths
           '(
             "C:/cygwin/usr/local/bin"
             "C:/cygwin/usr/bin"
@@ -173,14 +173,14 @@
         )
 
     (setenv "PATH"
-            (concat 
+            (concat
              (getenv "PATH")
              ";"
-             (mapconcat 'identity ts-NT-extra-paths ";")
+             (mapconcat 'identity trs-NT-extra-paths ";")
              )
             )
     (setq exec-path
-          (append exec-path ts-NT-extra-paths)
+          (append exec-path trs-NT-extra-paths)
           )
         )
   (setq magit-git-executable "c:/Program Files (x86)/Git/bin/git.exe")

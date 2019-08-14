@@ -2,7 +2,7 @@
 ;; * offset
 ;; ** Insert inactive timestamp of current time
 
-(defun ts-org-time-and-date-stamp-inactive () 
+(defun trs-org-time-and-date-stamp-inactive ()
   "Insert inactive timestamp of current time"
 
   ;; Calls org-time-stamp-inactive with universal prefix
@@ -10,9 +10,9 @@
   (org-insert-time-stamp (current-time) t t)
   )
 
-;; ** ts-checklist-to-not-done
+;; ** trs-checklist-to-not-done
 
-(defun ts-checklist-to-not-done
+(defun trs-checklist-to-not-done
     ()
   "Replaces all checklist X with SPACE"
   (interactive)
@@ -31,7 +31,7 @@
 
 ;; ** Textmind startup
 
-(defun ts-textmind-startup ()
+(defun trs-textmind-startup ()
     (interactive)
 
   (spacemacs/toggle-fullscreen-frame)
@@ -41,7 +41,7 @@
 ;; ** proc sprinted DONE
 ;; *** pipify word list DONE
 
-(defun ts-pipify-word-list (arg)
+(defun trs-pipify-word-list (arg)
   "Converts multi-line word list into one line separated by pipes."
   (interactive "p")
 
@@ -54,7 +54,7 @@
   )
 ;; *** decompose a heading, after saving a mummy of it DONE
 
-(defun ts-decomposing-mummy ()
+(defun trs-decomposing-mummy ()
   "From a single-window frame in org-mode, do setup to decompose a heading."
   (interactive)
 
@@ -66,7 +66,7 @@
                    (org-at-heading-p)) t) (user-error "%s" "Error, point must be inside a heading"))
         (t (progn
 
-             (ts-ends-n-newlines)
+             (trs-ends-n-newlines)
              (goto-char (point-max))
              (insert (buffer-substring (point-min) (point-max))) ; double the heading
              (goto-char (point-min))
@@ -96,22 +96,22 @@
 ;; *** Textmind checklist funcs DONE
 ;; **** create new sprinting DONE
 
-(defun ts-create-new-sprinting ()
+(defun trs-create-new-sprinting ()
     "Make new sprinting heading in '1sprinting.org"
     (interactive)
 
   (set-buffer "'1sprinting.org")
   (widen)
   (goto-char (point-max))
-  (insert "Created new sprinting heading via ts-create-new-sprinting\n")
-  (insert (concat "\n\n* Sprinting " (ts-org-time-and-date-stamp-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
+  (insert "Created new sprinting heading via trs-create-new-sprinting\n")
+  (insert (concat "\n\n* Sprinting " (trs-org-time-and-date-stamp-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
   (save-buffer))
 
 ;; **** double-file prior sprinting log DONE
 
 ;; ***** cut DONE
 
-(defun ts-cut-prior-sprinting ()
+(defun trs-cut-prior-sprinting ()
   "File prior sprinting heading twice to '2sprinted.org"
 
   (set-buffer "'1sprinting.org")
@@ -129,7 +129,7 @@
   (org-demote-subtree)
   (org-demote-subtree)
   (org-demote-subtree)
-  (ts-snort-visible)
+  (trs-snort-visible)
 
   ;; is this necessary?
   (goto-char (point-max))
@@ -137,10 +137,10 @@
 
 ;; ***** paste DONE
 
-(defun ts-double-file-prior-sprinting ()
+(defun trs-double-file-prior-sprinting ()
   "File prior sprinting heading twice to '2sprinted.org"
 
-    (ts-cut-prior-sprinting)
+    (trs-cut-prior-sprinting)
 
     (assert (file-exists-p "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'2sprinted.org"))
     (find-file "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'2sprinted.org")
@@ -153,19 +153,19 @@
     (org-forward-heading-same-level 1)
     (insert "\n")
     (backward-char)
-    (insert ts-object-text)
+    (insert trs-object-text)
     (insert "\n")
     (save-buffer)
-    (let ((ts-searched-file-path (concat default-directory "../Inbox.org")))
-      (ts-create-inbox-org)
+    (let ((trs-searched-file-path (concat default-directory "../Inbox.org")))
+      (trs-create-inbox-org)
         )
-    (ts-insert-to-end-of-buffer)
+    (trs-insert-to-end-of-buffer)
     (save-buffer)
     (switch-to-buffer "'Meta.org")
   )
 ;; **** deletion pass DONE
 
-(defun ts-proc-sprinted-deletion-pass ()
+(defun trs-proc-sprinted-deletion-pass ()
     "Setup other frame to begin deletion pass for proc sprinted checklist."
 
   (other-frame 1)
@@ -177,7 +177,7 @@
   )
 ;; **** headingfy DONE
 
-(defun ts-headingfy ()
+(defun trs-headingfy ()
   "Create a heading and advance 2 paragraphs."
   (interactive)
 
@@ -190,7 +190,7 @@
   )
 ;; **** lazy-title DONE
 
-(defun ts-lazy-title ()
+(defun trs-lazy-title ()
   "Advance to next heading while lazy-titling proc sprinted."
   (interactive)
 
