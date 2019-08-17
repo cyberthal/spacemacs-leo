@@ -66,29 +66,41 @@
                    (org-at-heading-p)) t) (user-error "%s" "Error, point must be inside a heading"))
         (t (progn
 
-             (trs-ends-n-newlines)
+             ;; ensure region ends with two newlines
+             (if (bolp)
+                 (org-N-empty-lines-before-current 1)
+               (insert "\n\n")
+               )
+
+             ;; duplicate the heading
              (goto-char (point-max))
-             (insert (buffer-substring (point-min) (point-max))) ; double the heading
+             (insert (buffer-substring (point-min) (point-max)))
+
+             ;; title mummy heading
              (goto-char (point-min))
              (goto-char (line-end-position))
              (insert " | MUMMY")
+
+             ;; create scratch heading
              (org-global-cycle)
              (org-next-visible-heading 1)
-             (insert "\n")
-             (org-global-cycle)
-             (widen)
-             (org-next-visible-heading 1)
-             (org-insert-heading)
-             (insert "?")
+             (org-insert-heading '(4))
+             (insert "CANOPIC")
+
+             ;; prep CANOPIC heading
              (org-tree-to-indirect-buffer)
              (select-window (next-window))
              (goto-char (point-max))
-             (insert "\n")
+             (org-insert-heading)
+             (org-demote)
+             (insert "?")
+
+             ;; prep decomposing heading
              (other-window -1) ; ensures that golden-ratio enlarges home window
              (org-previous-visible-heading 1)
              (org-cycle)
              (org-narrow-to-subtree)
-             (outline-show-all)
+             (org-show-all '(headings))
              )
            )
         )
