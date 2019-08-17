@@ -67,6 +67,7 @@
         (t (progn
 
              ;; ensure region ends with two newlines
+             (goto-char (point-max))
              (if (bolp)
                  (org-N-empty-lines-before-current 1)
                (insert "\n\n")
@@ -78,8 +79,10 @@
 
              ;; title mummy heading
              (goto-char (point-min))
+             (org-show-all '(headings))
              (goto-char (line-end-position))
              (insert " | MUMMY")
+             (org-cycle)
 
              ;; create scratch heading
              (org-global-cycle)
