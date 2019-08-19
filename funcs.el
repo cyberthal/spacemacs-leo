@@ -104,6 +104,7 @@
              (org-cycle)
              (org-narrow-to-subtree)
              (org-show-all '(headings))
+             (org-cycle-hide-drawers 1)
              )
            )
         )
