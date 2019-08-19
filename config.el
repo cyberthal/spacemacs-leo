@@ -60,9 +60,19 @@
 
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
+;; *** text scale
+
+  (defun trs-darwin-supersize ()
+      (if (eq system-type 'darwin) ;; OSX
+          (text-scale-set 2))
+    )
+  (add-hook 'org-mode-hook
+            'trs-darwin-supersize)
+  (add-hook 'dired-mode-hook
+            'trs-darwin-supersize)
 ;; *** make org start with wrapped lines.  works.
-(setq org-startup-truncated nil)
-(setq line-move-visual nil)
+  (setq org-startup-truncated nil)
+  (setq line-move-visual nil)
 
 ;; *** word wrap for org only.  works.
 (add-hook 'org-mode-hook #'toggle-word-wrap)
