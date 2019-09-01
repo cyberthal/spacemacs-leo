@@ -17,8 +17,8 @@
 
 ;; ** Treesort
 
-(global-set-key (kbd "H-f") 'trs-throw)
-(global-set-key (kbd "H-g") 'trs-throw-up)
+(global-set-key (kbd "H-f") 'trs-refile)
+(global-set-key (kbd "H-g") 'trs-refile-up)
 (global-set-key (kbd "C-c k") 'trs-delete-this-buffer-and-file)
 (global-set-key (kbd "s-n") 'trs-pipify-word-list)
 (global-set-key (kbd "C-c l") 'trs-store-link-fold-drawer)
