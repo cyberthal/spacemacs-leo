@@ -2,7 +2,7 @@
 ;; * offset
 ;; ** Insert inactive timestamp of current time
 
-(defun trs-org-time-and-date-stamp-inactive ()
+(defun leo-org-time-and-date-stamp-inactive ()
   "Insert inactive timestamp of current time"
 
   ;; Calls org-time-stamp-inactive with universal prefix
@@ -10,9 +10,9 @@
   (org-insert-time-stamp (current-time) t t)
   )
 
-;; ** trs-checklist-to-not-done
+;; ** leo-checklist-to-not-done
 
-(defun trs-checklist-to-not-done
+(defun leo-checklist-to-not-done
     ()
   "Replaces all checklist X with SPACE"
   (interactive)
@@ -31,7 +31,7 @@
 
 ;; ** Textmind startup
 
-(defun trs-textmind-startup ()
+(defun leo-textmind-startup ()
     (interactive)
 
   (spacemacs/toggle-fullscreen-frame)
@@ -41,7 +41,7 @@
 ;; ** proc sprinted DONE
 ;; *** pipify word list DONE
 
-(defun trs-pipify-word-list (arg)
+(defun leo-pipify-word-list (arg)
   "Converts multi-line word list into one line separated by pipes."
   (interactive "p")
 
@@ -54,7 +54,7 @@
   )
 ;; *** decompose a heading, after saving a mummy of it DONE
 
-(defun trs-decomposing-mummy ()
+(defun leo-decomposing-mummy ()
   "From a single-window frame in org-mode, do setup to decompose a heading."
   (interactive)
 
@@ -112,22 +112,22 @@
 ;; *** Textmind checklist funcs DONE
 ;; **** create new sprinting DONE
 
-(defun trs-create-new-sprinting ()
+(defun leo-create-new-sprinting ()
     "Make new sprinting heading in '1sprinting.org"
     (interactive)
 
   (set-buffer "'1sprinting.org")
   (widen)
   (goto-char (point-max))
-  (insert "Created new sprinting heading via trs-create-new-sprinting\n")
-  (insert (concat "\n\n* Sprinting " (trs-org-time-and-date-stamp-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
+  (insert "Created new sprinting heading via leo-create-new-sprinting\n")
+  (insert (concat "\n\n* Sprinting " (leo-org-time-and-date-stamp-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
   (save-buffer))
 
 ;; **** double-file prior sprinting log DONE
 
 ;; ***** cut DONE
 
-(defun trs-cut-prior-sprinting ()
+(defun leo-cut-prior-sprinting ()
   "File prior sprinting heading twice to '2sprinted.org"
 
   (set-buffer "'1sprinting.org")
@@ -145,7 +145,7 @@
   (org-demote-subtree)
   (org-demote-subtree)
   (org-demote-subtree)
-  (trs-snort-visible)
+  (leo-snort-visible)
 
   ;; is this necessary?
   (goto-char (point-max))
@@ -153,10 +153,10 @@
 
 ;; ***** paste DONE
 
-(defun trs-double-file-prior-sprinting ()
+(defun leo-double-file-prior-sprinting ()
   "File prior sprinting heading twice to '2sprinted.org"
 
-    (trs-cut-prior-sprinting)
+    (leo-cut-prior-sprinting)
 
     (assert (file-exists-p "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'2sprinted.org"))
     (find-file "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'2sprinted.org")
@@ -169,19 +169,19 @@
     (org-forward-heading-same-level 1)
     (insert "\n")
     (backward-char)
-    (insert trs-object-text)
+    (insert leo-object-text)
     (insert "\n")
     (save-buffer)
-    (let ((trs-searched-file-path (concat default-directory "../Inbox.org")))
-      (trs-create-inbox-org)
+    (let ((leo-searched-file-path (concat default-directory "../Inbox.org")))
+      (leo-create-inbox-org)
         )
-    (trs-insert-to-end-of-buffer)
+    (leo-insert-to-end-of-buffer)
     (save-buffer)
     (switch-to-buffer "'Meta.org")
   )
 ;; **** deletion pass DONE
 
-(defun trs-proc-sprinted-deletion-pass ()
+(defun leo-proc-sprinted-deletion-pass ()
     "Setup other frame to begin deletion pass for proc sprinted checklist."
 
   (other-frame 1)
@@ -193,7 +193,7 @@
   )
 ;; **** headingfy DONE
 
-(defun trs-headingfy ()
+(defun leo-headingfy ()
   "Create a heading and advance 2 paragraphs."
   (interactive)
 
@@ -206,7 +206,7 @@
   )
 ;; **** lazy-title DONE
 
-(defun trs-lazy-title ()
+(defun leo-lazy-title ()
   "Advance to next heading while lazy-titling proc sprinted."
   (interactive)
 
