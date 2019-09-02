@@ -326,7 +326,7 @@ you should place your code here."
 
   (require 'git-annex)                  ; need magit-annex too?
 
-  (if (string-equal "Spacemacs-Prod")
+  (if (string-equal "server")
       (add-to-list 'load-path "~/1-Mansort/2-Other-text/Github/Emacs/My/Treesort/Prod")
     (add-to-list 'load-path "~/1-Mansort/2-Other-text/Github/Emacs/My/Treesort/Dev"))
   (use-package trs)
