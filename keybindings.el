@@ -17,11 +17,11 @@
 
 ;; ** Treesort
 
-(global-set-key (kbd "H-f") 'trs-refile)
-(global-set-key (kbd "H-g") 'trs-refile-up)
-(global-set-key (kbd "C-c k") 'trs-delete-this-buffer-and-file)
-(global-set-key (kbd "s-n") 'trs-pipify-word-list)
-(global-set-key (kbd "C-c l") 'trs-store-link-fold-drawer)
+(global-set-key (kbd "H-f") 'leo-refile)
+(global-set-key (kbd "H-g") 'leo-refile-up)
+(global-set-key (kbd "C-c k") 'leo-delete-this-buffer-and-file)
+(global-set-key (kbd "s-n") 'leo-pipify-word-list)
+(global-set-key (kbd "C-c l") 'leo-store-link-fold-drawer)
 
 ;; ** org-mode
 
@@ -29,7 +29,7 @@
 
   (global-set-key (kbd "H-t") 'org-todo)
 
-  (global-set-key (kbd "H-SPC") 'trs-org-time-and-date-stamp-inactive)
+  (global-set-key (kbd "H-SPC") 'leo-org-time-and-date-stamp-inactive)
   (global-set-key (kbd "s-SPC") 'org-time-stamp)
   )
 
