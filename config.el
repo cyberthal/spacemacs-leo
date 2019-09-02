@@ -62,14 +62,14 @@
 (with-eval-after-load 'org
 ;; *** text scale
 
-  (defun trs-darwin-supersize ()
+  (defun leo-darwin-supersize ()
       (if (eq system-type 'darwin) ;; OSX
           (text-scale-set 2))
     )
   (add-hook 'org-mode-hook
-            'trs-darwin-supersize)
+            'leo-darwin-supersize)
   (add-hook 'dired-mode-hook
-            'trs-darwin-supersize)
+            'leo-darwin-supersize)
 ;; *** make org start with wrapped lines.  works.
   (setq org-startup-truncated nil)
   (setq line-move-visual nil)
@@ -81,10 +81,10 @@
 ;; *** line spacing
 
 ;; add line spacing to org-mode
-(defun trs-space-lines ()
+(defun leo-space-lines ()
   (setq line-spacing 5)
   )
-(add-hook 'org-mode-hook 'trs-space-lines)
+(add-hook 'org-mode-hook 'leo-space-lines)
 ;; *** use org UIUDs
 
 ;; Use global IDs (for unique links)
@@ -171,7 +171,7 @@
 
 (when (string-equal system-type "windows-nt")
   (let (
-        (trs-NT-extra-paths
+        (leo-NT-extra-paths
           '(
             "C:/cygwin/usr/local/bin"
             "C:/cygwin/usr/bin"
@@ -186,11 +186,11 @@
             (concat
              (getenv "PATH")
              ";"
-             (mapconcat 'identity trs-NT-extra-paths ";")
+             (mapconcat 'identity leo-NT-extra-paths ";")
              )
             )
     (setq exec-path
-          (append exec-path trs-NT-extra-paths)
+          (append exec-path leo-NT-extra-paths)
           )
         )
   (setq magit-git-executable "c:/Program Files (x86)/Git/bin/git.exe")
