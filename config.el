@@ -224,3 +224,15 @@
 ;; add Textmind to org-agenda scope
 (push "~/.emacs.d/private/personal/" load-path)
 (require 'maintext-toggle)
+
+;; ** gif-screencast
+
+(with-eval-after-load 'gif-screencast
+  (define-key gif-screencast-mode-map (kbd "<f8>") 'gif-screencast-toggle-pause)
+  (define-key gif-screencast-mode-map (kbd "<f9>") 'gif-screencast-stop)
+
+  (when (eq 'darwin system-type)
+    (setq gif-screencast-args '("-x")) ;; To shut up the shutter sound of `screencapture' (see `gif-screencast-command').
+    (setq gif-screencast-cropping-program "mogrify") ;; Optional: Used to crop the capture to the Emacs frame.
+    (setq gif-screencast-capture-format "ppm") ;; Optional: Required to crop captured images.
+    ))
