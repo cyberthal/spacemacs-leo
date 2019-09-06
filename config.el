@@ -62,14 +62,25 @@
 (with-eval-after-load 'org
 ;; *** text scale
 
-  (defun leo-darwin-supersize ()
-      (if (eq system-type 'darwin) ;; OSX
-          (text-scale-set 2))
-    )
+(defgroup leo nil "Leo's personal Spacemacs layer."
+  :group 'convenience)
+
+(defcustom leo-supersize-text t
+  "Non-nil if text should be supersized."
+  :type 'boolean
+  :group 'leo)
+
+(defun leo-darwin-supersize ()
+  (if (eq system-type 'darwin) ;; OSX
+      (text-scale-set 2)))
+
+(when leo-supersize-text
   (add-hook 'org-mode-hook
             'leo-darwin-supersize)
   (add-hook 'dired-mode-hook
-            'leo-darwin-supersize)
+            'leo-darwin-supersize))
+
+
 ;; *** make org start with wrapped lines.  works.
   (setq org-startup-truncated nil)
   (setq line-move-visual nil)
