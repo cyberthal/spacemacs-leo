@@ -42,7 +42,7 @@ values."
      emacs-lisp
      syntax-checking
      git
-     autohotkey ; because org-link search scope includes .ahk files
+     autohotkey              ; because org-link search scope includes .ahk files
 
      ;; emacs
      helm
@@ -52,6 +52,7 @@ values."
 
      ;; text
      (spell-checking :variables ispell-program-name "/usr/local/bin/ispell")
+     markdown
 
      ;; my
      personal
