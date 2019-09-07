@@ -352,7 +352,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(find-file-visit-truename nil)
  '(global-dired-hide-details-mode t)
- '(leo-supersize-text nil)
+ '(leo-supersize-text t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-use-insert-directory-program t)
  '(nrepl-message-colors
