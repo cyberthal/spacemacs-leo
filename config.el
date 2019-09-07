@@ -29,7 +29,7 @@
 ;; **** misc
 
 (require 'dired-x) ; Enable dired-x
-(setq-default dired-omit-files-p t) ; Buffer-local variable
+(add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
 
 ;; dired-quick-sort activate
 ;; (require 'dired-quick-sort)
