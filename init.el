@@ -43,6 +43,7 @@ values."
      syntax-checking
      git
      autohotkey              ; because org-link search scope includes .ahk files
+     javascript              ; for dired searches
 
      ;; emacs
      helm
@@ -350,6 +351,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(find-file-visit-truename nil)
  '(global-dired-hide-details-mode t)
+ '(leo-supersize-text nil)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-use-insert-directory-program t)
  '(nrepl-message-colors
