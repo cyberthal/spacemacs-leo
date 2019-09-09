@@ -15,7 +15,7 @@
 ;; function as super modifier
 (setq ns-function-modifier 'hyper)
 
-;; ** Treesort
+;; ** Treefactor
 
 (global-set-key (kbd "H-f") 'leo-refile)
 (global-set-key (kbd "H-g") 'leo-refile-up)
