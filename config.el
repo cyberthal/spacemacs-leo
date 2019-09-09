@@ -78,6 +78,8 @@
   (add-hook 'org-mode-hook
             'leo-darwin-supersize)
   (add-hook 'dired-mode-hook
+            'leo-darwin-supersize)
+  (add-hook 'markdown-mode-hook
             'leo-darwin-supersize))
 
 
