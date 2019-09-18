@@ -153,25 +153,25 @@
 ;; *** MobileOrg
 
 ;; Set to the location of your Org files on your local system
-(setq org-directory "~/1-Mansort/1-Textmind")
+;; (setq org-directory "~/1-Mansort/1-Textmind")
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/1-Mansort/1-Textmind/2-Linked/flagged.org")
+;; (setq org-mobile-inbox-for-pull "~/1-Mansort/1-Textmind/2-Linked/flagged.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
-(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+;; (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
 ;; Enable encryption
-(setq org-mobile-use-encryption t)
+;; (setq org-mobile-use-encryption t)
 ;; Set a password
-(setq org-mobile-encryption-password
-      (condition-case nil
-          (with-temp-buffer
-            (insert-file-contents "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Mobileorg/Password.txt")
-            (goto-char (point-max))
-            (delete-char -1)
-            (buffer-string))
-        (user-error "%s" "MobileOrg password file not found")
-        )
-      )
+;; (setq org-mobile-encryption-password
+;;       (condition-case nil
+;;           (with-temp-buffer
+;;             (insert-file-contents "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Mobileorg/Password.txt")
+;;             (goto-char (point-max))
+;;             (delete-char -1)
+;;             (buffer-string))
+;;         (user-error "%s" "MobileOrg password file not found")
+;;         )
+;;       )
 ;; *** end org-mode block
 
 ) 
