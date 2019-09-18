@@ -18,4 +18,5 @@ ln -s $SCRIPT_DIR/ ~/.emacs.d/private/personal
 
 # symlink persp-mode Textmind layout
 rm -f ~/.emacs.d/.cache/layouts/Textmind-main
+mkdir -p ~/.emacs.d/.cache/layouts/
 ln -s $SCRIPT_DIR/persp-mode/Textmind-main ~/.emacs.d/.cache/layouts/
