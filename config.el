@@ -232,6 +232,16 @@
     )
 )
 
+;; *** Linux xmodmap trigger
+
+(defun leo-xmodmap ()
+    (start-process-shell-command "xmodmap" nil "xmodmap" "~/.Xmodmap")
+    )
+
+(when (eq system-type 'gnu/linux)
+  (global-set-key (kbd "<menu>") 'leo-xmodmap)
+  )
+
 ;; ** Textmind
 
 ;; add Textmind to org-agenda scope
