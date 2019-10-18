@@ -2,6 +2,11 @@
 ;; * offset
 ;; ** ergonomics
 ;; *** visual
+;; **** fonts
+
+(when (member "aakar" (font-family-list)) (set-face-font 'variable-pitch "aakar"))
+(when (member "Palatino" (font-family-list)) (set-face-font 'variable-pitch "Palatino"))
+
 ;; **** nyan-mode
 
                                         ; (spaceline-toggle-nyan-cat-on)
