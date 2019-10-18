@@ -310,6 +310,10 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
+  ;; Temporarily set to nil if multiple packages fail to install due to signature check failure
+  ;; http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
+  (setq package-check-signature t)
+
   ;; To define the outline-minor-mode-prefix key before the package is loaded
   (defvar outline-minor-mode-prefix (kbd "H-c"))
   ;; Setup outshine
