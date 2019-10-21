@@ -32,7 +32,10 @@
 ;; ** Textmind startup
 
 (defun leo-textmind-startup ()
-    (interactive)
+  (interactive)
+
+  (when (member "aakar" (font-family-list)) (set-face-font 'variable-pitch "aakar"))
+  (when (member "Palatino" (font-family-list)) (set-face-font 'variable-pitch "Palatino"))
 
   (spacemacs/toggle-fullscreen-frame)
   (make-frame)
