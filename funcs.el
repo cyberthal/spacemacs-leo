@@ -29,20 +29,28 @@
 ;; binding it to a handy key, since as a command it won't macro repeat
 (global-set-key (kbd "C-S-n") 'boxes)
 
+;; ** set fonts
+
+(defun leo-set-fonts ()
+  (interactive)
+
+  (cond ((member "Palatino" (font-family-list)) (set-face-font 'variable-pitch "Palatino"))
+        ((member "Garamond" (font-family-list)) (set-face-font 'variable-pitch "Garamond"))
+        ((member "Georgia" (font-family-list)) (set-face-font 'variable-pitch "Georgia"))
+        ((member "aakar" (font-family-list)) (set-face-font 'variable-pitch "aakar"))
+        ((member "Times New Roman" (font-family-list)) (set-face-font 'variable-pitch "Times New Roman"))))
 ;; ** Textmind startup
 
 (defun leo-textmind-startup ()
   (interactive)
 
-  (when (member "aakar" (font-family-list)) (set-face-font 'variable-pitch "aakar"))
-  (when (member "Palatino" (font-family-list)) (set-face-font 'variable-pitch "Palatino"))
-
+  (leo-set-fonts)
   (spacemacs/toggle-fullscreen-frame)
   (make-frame)
   (spacemacs/toggle-fullscreen-frame)
   (persp-load-state-from-file "Textmind-main"))
-;; ** proc sprinted DONE
-;; *** pipify word list DONE
+;; ** proc sprinted
+;; *** pipify word list
 
 (defun leo-pipify-word-list (arg)
   "Converts multi-line word list into one line separated by pipes."
