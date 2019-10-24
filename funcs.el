@@ -39,6 +39,17 @@
         ((member "Georgia" (font-family-list)) (set-face-font 'variable-pitch "Georgia"))
         ((member "aakar" (font-family-list)) (set-face-font 'variable-pitch "aakar"))
         ((member "Times New Roman" (font-family-list)) (set-face-font 'variable-pitch "Times New Roman"))))
+;; ** Linux xmodmap trigger
+
+(defun leo-xmodmap ()
+  (interactive)
+  (start-process-shell-command "xmodmap" nil "xmodmap" "~/.Xmodmap")
+  )
+
+(when (eq system-type 'gnu/linux)
+  (global-set-key (kbd "<menu>") 'leo-xmodmap)
+  )
+
 ;; ** Textmind startup
 
 (defun leo-textmind-startup ()
