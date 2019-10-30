@@ -35,6 +35,7 @@
 ;; (require 'dired-quick-sort)
 ;; (dired-quick-sort-setup)
 
+(setq delete-by-moving-to-trash t)
 ;; **** dired sorting by directories first
 
 ;; Mac
@@ -215,7 +216,7 @@
 ;; (getenv "PATH")
 ;; (insert exec-path)
 
-;; *** Mac path
+;; *** Mac
 
 ;; fixes dired display failure
 ;; by switching from default mac ls to brew coreutils

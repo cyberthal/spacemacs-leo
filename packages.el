@@ -24,7 +24,9 @@
 ;;; Code:
 
 (defconst personal-packages
-  '((dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
+  '(
+    (dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
+    osx-trash
     )
 
   "The list of Lisp packages required by the personal layer.
@@ -59,5 +61,13 @@ Each entry is either:
 (defun personal/init-dired+ ()
  (use-package dired+)
  )
+
+(defun personal/init-osx-trash ()
+  (use-package osx-trash
+    :if (spacemacs/system-is-mac)
+    :demand
+    :config (osx-trash-setup)
+    )
+  )
 
 ;;; packages.el ends here
