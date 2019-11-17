@@ -20,3 +20,6 @@ ln -s $SCRIPT_DIR/ ~/.emacs.d/private/personal
 rm -f ~/.emacs.d/.cache/layouts/Textmind-main
 mkdir -p ~/.emacs.d/.cache/layouts/
 ln -s $SCRIPT_DIR/persp-mode/Textmind-main ~/.emacs.d/.cache/layouts/
+
+# remove default .spacemacs
+mv -f ~/.spacemacs ~/.spacemacs-bak
