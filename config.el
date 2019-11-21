@@ -25,6 +25,25 @@
 (with-eval-after-load 'org
   (spacemacs/toggle-golden-ratio-on)
   )
+
+;; *** text scale
+
+(defgroup leo nil "Leo's personal Spacemacs layer."
+  :group 'convenience)
+
+(defcustom leo-supersize-text t
+  "Non-nil if text should be supersized."
+  :type 'boolean
+  :group 'leo)
+
+(when leo-supersize-text
+  (add-hook 'org-mode-hook
+            'leo-darwin-supersize)
+  (add-hook 'dired-mode-hook
+            'leo-darwin-supersize)
+  (add-hook 'markdown-mode-hook
+            'leo-darwin-supersize))
+
 ;; *** dired
 ;; **** misc
 
@@ -61,29 +80,6 @@
 
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
-;; *** text scale
-
-(defgroup leo nil "Leo's personal Spacemacs layer."
-  :group 'convenience)
-
-(defcustom leo-supersize-text t
-  "Non-nil if text should be supersized."
-  :type 'boolean
-  :group 'leo)
-
-(defun leo-darwin-supersize ()
-  (if (eq system-type 'darwin) ;; OSX
-      (text-scale-set 2)))
-
-(when leo-supersize-text
-  (add-hook 'org-mode-hook
-            'leo-darwin-supersize)
-  (add-hook 'dired-mode-hook
-            'leo-darwin-supersize)
-  (add-hook 'markdown-mode-hook
-            'leo-darwin-supersize))
-
-
 ;; *** make org start with wrapped lines.  works.
   (setq org-startup-truncated nil)
   (setq line-move-visual nil)
@@ -223,6 +219,10 @@
 (when (eq system-type 'darwin)
   (require 'ls-lisp)
   (setq insert-directory-program "gls"))
+
+(defun leo-darwin-supersize ()
+  (if (eq system-type 'darwin) ;; OSX
+      (text-scale-set 2)))
 
 ;; *** CentOS git path
 
