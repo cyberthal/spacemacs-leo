@@ -107,4 +107,4 @@
 
 ;; ** dired
 
-(global-set-key (kbd "s-i") 'ido-dired)
+(global-set-key (kbd "s-i") 'spacemacs/helm-find-files)
