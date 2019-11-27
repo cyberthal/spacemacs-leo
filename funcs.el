@@ -59,7 +59,13 @@
   (spacemacs/toggle-fullscreen-frame)
   (make-frame)
   (spacemacs/toggle-fullscreen-frame)
-  (persp-load-state-from-file "Textmind-main"))
+
+  (if (eq user-full-name "demo")
+      (persp-load-state-from-file "Textmind-demo")
+    (persp-load-state-from-file "Textmind-main"))
+
+  )
+
 ;; ** proc sprinted
 ;; *** pipify word list
 

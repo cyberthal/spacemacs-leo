@@ -1,6 +1,6 @@
 ;; -*- mode: emacs-lisp; eval: (progn (pp-buffer) (indent-buffer)) -*-
 ((def-persp nil
-   ((def-buffer "'Daily-Sequence.org" "~/1-Mansort/1-Textmind/2-Linked/1-Persinter/Executive/Checklist/'Daily-Sequence.org" org-mode)
+   (
     (def-buffer "'Meta.org" "~/1-Mansort/1-Textmind/2-Linked/1-Persinter/Executive/Checklist/'Meta.org" org-mode)
     (def-buffer "'1sprinting.org" "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'1sprinting.org" org-mode)
     )
