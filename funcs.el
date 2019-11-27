@@ -60,7 +60,7 @@
   (make-frame)
   (spacemacs/toggle-fullscreen-frame)
 
-  (if (eq user-full-name "demo")
+  (if (string-equal user-full-name "demo")
       (persp-load-state-from-file "Textmind-demo")
     (persp-load-state-from-file "Textmind-main"))
 
