@@ -402,6 +402,7 @@ you should place your code here."
    (quote
     ((interactive cider-repl-mode clojure-mode clojurec-mode clojurescript-mode clojurex-mode common-lisp-mode eshell-mode geiser-repl-mode inf-clojure-mode inferior-emacs-lisp-mode inferior-lisp-mode inferior-scheme-mode lisp-interaction-mode lisp-mode monroe-mode racket-mode racket-repl-mode scheme-interaction-mode scheme-mode slime-repl-mode stumpwm-mode))))
  '(tool-bar-mode nil)
+ '(treefactor-alias-prefix-2 "leo")
  '(treefactor-use-alias-prefixes t)
  '(truncate-lines nil)
  '(vc-annotate-background "#2B2B2B")

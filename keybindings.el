@@ -17,8 +17,8 @@
 
 ;; ** Treefactor
 
-(global-set-key (kbd "H-f") 'leo-refile)
-(global-set-key (kbd "H-g") 'leo-refile-up)
+(global-set-key (kbd "H-f") 'leo-throw)
+(global-set-key (kbd "H-g") 'leo-up)
 (global-set-key (kbd "C-c k") 'leo-delete-this-buffer-and-file)
 (global-set-key (kbd "s-n") 'leo-pipify-word-list)
 (global-set-key (kbd "C-c l") 'leo-org-store-link-fold-drawer)
