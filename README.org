@@ -1,4 +1,4 @@
-#+TITLE: personal layer
+#+TITLE: Cyberthal's Spacemacs layer
 
 # The maximum height of the logo should be 200 pixels.
 [[img/personal.png]]
@@ -6,21 +6,60 @@
 # TOC links should be GitHub style anchors.
 * Table of Contents                                       :TOC_4_gh:noexport:
 - [[#install][Install]]
+  - [[#install-spacemacs][install Spacemacs]]
+  - [[#clone-and-deploy-layer][Clone and deploy layer]]
+    - [[#to-self-on-development-account-install-dev-branch][to self: On development account, install dev branch]]
+  - [[#create-expected-textmind-directories][create expected Textmind directories]]
   - [[#add-personal-to-your-spacemacs][Add Personal to your =~/.spacemacs=]]
+  - [[#run-spacemacs-to-install-new-packages][run Spacemacs to install new packages]]
+- [[#suggested-hyper-keybind-for-macos][Suggested Hyper keybind for MacOS]]
 - [[#notes][Notes]]
-  - [[#on-development-account-install-dev-branch][On development account, install dev branch]]
 
 * Install
 
-** Add Personal to your =~/.spacemacs=
+** install [[http://spacemacs.org][Spacemacs]]
 
-Add =personal= to the existing =dotspacemacs-configuration-layers= list.
+** Clone and deploy layer
 
-* Notes
+#+begin_src sh
+# clone the layer
+mkdir -p ~/1-Mansort/2-Other-text/Github/Emacs/My/Personal
+git clone https://github.com/cyberthal/spacemacs-personal.git ~/1-Mansort/2-Other-text/Github/Emacs/My/Personal
 
-** On development account, install dev branch
+# deploy it
+cd ~/1-Mansort/2-Other-text/Github/Emacs/My/Personal
+./install-nixlike.sh
+#+end_src
+
+*** to self: On development account, install dev branch
 
 So that customizations I initiate there are saved into Dev instead of Prod.
 And so that I can experiment without breaking my other machines.
 So that I can dogfood before releasing.
 Plus if I break something it's easy to just install /prod to recover to the last known good point.
+** create expected Textmind directories
+
+Otherwise Spacemacs startup will fail with an error.
+
+#+begin_src sh
+mkdir -p ~/1-Mansort/1-Textmind/1-Agenda
+mkdir -p ~/1-Mansort/1-Textmind/2-Linked
+#+end_src
+
+** Add Personal to your =~/.spacemacs=
+
+Add =personal= to the existing =dotspacemacs-configuration-layers= list.
+
+** run Spacemacs to install new packages
+
+* Suggested Hyper keybind for MacOS
+
+Assuming a Microsoft Natural Ergonomic Keyboard with an Appkey:
+
+1. open Karabiner Elements
+2. Bind appkey to fn
+
+(Keybind won't work through Synergy.)
+
+* Notes
+
