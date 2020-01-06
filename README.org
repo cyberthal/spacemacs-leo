@@ -13,7 +13,6 @@
   - [[#add-personal-to-your-spacemacs][Add Personal to your =~/.spacemacs=]]
   - [[#run-spacemacs-to-install-new-packages][run Spacemacs to install new packages]]
 - [[#suggested-hyper-keybind-for-macos][Suggested Hyper keybind for MacOS]]
-- [[#notes][Notes]]
 
 * Install
 
@@ -60,6 +59,3 @@ Assuming a Microsoft Natural Ergonomic Keyboard with an Appkey:
 2. Bind appkey to fn
 
 (Keybind won't work through Synergy.)
-
-* Notes
-
