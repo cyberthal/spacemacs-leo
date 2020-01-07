@@ -1,4 +1,4 @@
-;; * keybindings.el in private/personal layer
+;; * keybindings.el in private/leo layer
 ;; * code
 
 ;; ** enable hyper and super keys

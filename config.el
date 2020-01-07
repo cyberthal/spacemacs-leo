@@ -1,4 +1,4 @@
-;; * config.el of private/personal layer
+;; * config.el of private/leo layer
 ;; * offset
 ;; ** ergonomics
 ;; *** visual
@@ -28,7 +28,7 @@
 
 ;; *** text scale
 
-(defgroup leo nil "Leo's personal Spacemacs layer."
+(defgroup leo nil "leo Spacemacs layer."
   :group 'convenience)
 
 (defcustom leo-supersize-text t
@@ -144,7 +144,7 @@
 
 ;; *** load bbcodeize
 
-(push "~/.emacs.d/private/personal/bbcode/" load-path)
+(push "~/.emacs.d/private/leo/bbcode/" load-path)
 (require 'bbcodeize)
 
 ;; *** MobileOrg
@@ -236,7 +236,7 @@
 ;; ** Textmind
 
 ;; add Textmind to org-agenda scope
-(push "~/.emacs.d/private/personal/" load-path)
+(push "~/.emacs.d/private/leo/" load-path)
 (require 'maintext-toggle)
 
 ;; ** gif-screencast

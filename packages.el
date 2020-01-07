@@ -1,4 +1,4 @@
-;;; packages.el --- personal layer packages file for Spacemacs.
+;;; packages.el --- leo layer packages file for Spacemacs.
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -12,24 +12,24 @@
 ;;
 ;;
 ;; Briefly, each package to be installed or configured by this layer should be
-;; added to `personal-packages'. Then, for each package PACKAGE:
+;; added to `leo-packages'. Then, for each package PACKAGE:
 ;;
 ;; - If PACKAGE is not referenced by any other Spacemacs layer, define a
-;;   function `personal/init-PACKAGE' to load and initialize the package.
+;;   function `leo/init-PACKAGE' to load and initialize the package.
 
 ;; - Otherwise, PACKAGE is already referenced by another Spacemacs layer, so
-;;   define the functions `personal/pre-init-PACKAGE' and/or
-;;   `personal/post-init-PACKAGE' to customize the package as it is loaded.
+;;   define the functions `leo/pre-init-PACKAGE' and/or
+;;   `leo/post-init-PACKAGE' to customize the package as it is loaded.
 
 ;;; Code:
 
-(defconst personal-packages
+(defconst leo-packages
   '(
     (dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
     osx-trash
     )
 
-  "The list of Lisp packages required by the personal layer.
+  "The list of Lisp packages required by the leo layer.
 
 Each entry is either:
 
@@ -58,11 +58,11 @@ Each entry is either:
 
   )
 
-(defun personal/init-dired+ ()
+(defun leo/init-dired+ ()
  (use-package dired+)
  )
 
-(defun personal/init-osx-trash ()
+(defun leo/init-osx-trash ()
   (use-package osx-trash
     :if (spacemacs/system-is-mac)
     :demand

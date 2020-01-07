@@ -59,7 +59,7 @@ values."
      pandoc
 
      ;; my
-     personal
+     leo
      outshine
      )
    ;; List of additional packages that will be installed without being

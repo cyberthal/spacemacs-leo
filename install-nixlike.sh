@@ -13,8 +13,8 @@ rm -f ~/.spacemacs.d/init.el
 ln -s $SCRIPT_DIR/init.el ~/.spacemacs.d/
 
 # symlink personal directory
-rm -f ~/.emacs.d/private/personal
-ln -s $SCRIPT_DIR/ ~/.emacs.d/private/personal
+rm -f ~/.emacs.d/private/leo
+ln -s $SCRIPT_DIR/ ~/.emacs.d/private/leo
 
 # symlink persp-mode Textmind layout
 rm -f ~/.emacs.d/.cache/layouts/Textmind-main

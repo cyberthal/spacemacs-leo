@@ -1,4 +1,4 @@
-;; * funcs.el in private/personal layer
+;; * funcs.el in private/leo layer
 ;; * offset
 ;; ** Insert inactive timestamp of current time
 

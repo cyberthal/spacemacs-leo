@@ -1,32 +1,39 @@
-#+TITLE: Cyberthal's Spacemacs layer
+#+TITLE: Leo Spacemacs layer
 
 # The maximum height of the logo should be 200 pixels.
 [[img/personal.png]]
 
 # TOC links should be GitHub style anchors.
 * Table of Contents                                       :TOC_4_gh:noexport:
+- [[#name][Name]]
 - [[#install][Install]]
-  - [[#install-spacemacs][install Spacemacs]]
-  - [[#clone-and-deploy-layer][Clone and deploy layer]]
+  - [[#install-spacemacs][Install Spacemacs]]
+  - [[#clone-and-install-the-layer][Clone and install the layer]]
     - [[#to-self-on-development-account-install-dev-branch][to self: On development account, install dev branch]]
-  - [[#create-expected-textmind-directories][create expected Textmind directories]]
-  - [[#add-personal-to-your-spacemacs][Add Personal to your =~/.spacemacs=]]
+  - [[#create-expected-textmind-directories][Create expected Textmind directories]]
+  - [[#add-layer-to-spacemacs][Add layer to =~/.spacemacs=]]
   - [[#run-spacemacs-to-install-new-packages][run Spacemacs to install new packages]]
 - [[#suggested-hyper-keybind-for-macos][Suggested Hyper keybind for MacOS]]
 
+* Name
+
+"Leo" stands for "Leo's Ergonomic Optimizations". Leo is my first name. 
+
+I chose "leo" rather than "cyberthal" so that the command prefix would be short and therefore easy to type.
+
 * Install
 
-** install [[http://spacemacs.org][Spacemacs]]
+** Install [[http://spacemacs.org][Spacemacs]]
 
-** Clone and deploy layer
+** Clone and install the layer
 
 #+begin_src sh
 # clone the layer
-mkdir -p ~/1-Mansort/2-Other-text/Github/Emacs/My/Personal
-git clone https://github.com/cyberthal/spacemacs-personal.git ~/1-Mansort/2-Other-text/Github/Emacs/My/Personal
+mkdir -p ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
+git clone https://github.com/cyberthal/spacemacs-personal.git  ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
 
 # deploy it
-cd ~/1-Mansort/2-Other-text/Github/Emacs/My/Personal
+cd ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
 ./install-nixlike.sh
 #+end_src
 
@@ -37,7 +44,7 @@ And so that I can experiment without breaking my other machines.
 So that I can dogfood before releasing.
 Plus if I break something it's easy to just install /prod to recover to the last known good point.
 
-** create expected Textmind directories
+** Create expected Textmind directories
 
 Otherwise Spacemacs startup will fail with an error.
 
@@ -46,9 +53,9 @@ mkdir -p ~/1-Mansort/1-Textmind/1-Agenda
 mkdir -p ~/1-Mansort/1-Textmind/2-Linked
 #+end_src
 
-** Add Personal to your =~/.spacemacs=
+** Add layer to =~/.spacemacs=
 
-Add =personal= to the existing =dotspacemacs-configuration-layers= list.
+Add =leo= to the existing =dotspacemacs-configuration-layers= list.
 
 ** run Spacemacs to install new packages
 
