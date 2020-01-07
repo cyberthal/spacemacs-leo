@@ -1,11 +1,11 @@
 #+TITLE: Leo Spacemacs layer
 
 # The maximum height of the logo should be 200 pixels.
-[[img/personal.png]]
+[[img/leo.png]]
 
 # TOC links should be GitHub style anchors.
 * Table of Contents                                       :TOC_4_gh:noexport:
-- [[#name][Name]]
+- [[#name-explained][Name explained]]
 - [[#install][Install]]
   - [[#install-spacemacs][Install Spacemacs]]
   - [[#clone-and-install-the-layer][Clone and install the layer]]
@@ -15,7 +15,7 @@
   - [[#run-spacemacs-to-install-new-packages][run Spacemacs to install new packages]]
 - [[#suggested-hyper-keybind-for-macos][Suggested Hyper keybind for MacOS]]
 
-* Name
+* Name explained
 
 "Leo" stands for "Leo's Ergonomic Optimizations". Leo is my first name. 
 
@@ -30,7 +30,7 @@ I chose "leo" rather than "cyberthal" so that the command prefix would be short 
 #+begin_src sh
 # clone the layer
 mkdir -p ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
-git clone https://github.com/cyberthal/spacemacs-personal.git  ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
+git clone https://github.com/cyberthal/spacemacs-leo.git  ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
 
 # deploy it
 cd ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
