@@ -27,6 +27,7 @@
   '(
     (dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
     osx-trash
+    (pianobar :location (recipe :fetcher github :repo "agrif/pianobar.el" :files ("pianobar.el")))
     )
 
   "The list of Lisp packages required by the leo layer.
@@ -60,6 +61,10 @@ Each entry is either:
 
 (defun leo/init-dired+ ()
  (use-package dired+)
+ )
+
+(defun leo/init-pianobar ()
+ (use-package pianobar)
  )
 
 (defun leo/init-osx-trash ()
