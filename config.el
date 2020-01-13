@@ -1,6 +1,10 @@
 ;; * config.el of private/leo layer
 ;; * offset
 ;; ** ergonomics
+;; *** audio
+
+(setq pianobar-config t)
+
 ;; *** visual
 ;; **** nyan-mode
 
