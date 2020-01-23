@@ -84,13 +84,13 @@
 
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
-;; *** make org start with wrapped lines.  works.
+;; *** make org start with wrapped lines.
   (setq org-startup-truncated nil)
   (setq line-move-visual nil)
 
-;; *** word wrap for org only.  works.
-(add-hook 'org-mode-hook #'toggle-word-wrap)
+;; *** word wrap for org only
 
+(add-hook 'org-mode-hook #'toggle-word-wrap)
 
 ;; *** line spacing
 
@@ -122,6 +122,7 @@
 (setq org-highest-priority ?0)
 (setq org-lowest-priority ?9)
 (setq org-default-priority ?5)
+
 ;; *** load org agenda files recursively
 
 ;; http://stackoverflow.com/questions/17215868/recursively-adding-org-files-in-a-top-level-directory-for-org-agenda-files-take
