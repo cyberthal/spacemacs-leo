@@ -20,9 +20,10 @@
 (global-set-key (kbd "H-f") 'leo-throw)
 (global-set-key (kbd "H-g") 'leo-up)
 (global-set-key (kbd "C-c k") 'leo-delete-this-buffer-and-file)
-(global-set-key (kbd "s-n") 'leo-pipify-word-list)
+(global-set-key (kbd "s-n") 'leo-pipify-lines)
 (global-set-key (kbd "C-c l") 'leo-org-store-link-fold-drawer)
 (global-set-key (kbd "H-v") 'leo-org-refactor-heading)
+(global-set-key (kbd "H-v") 'leo-org-toggle-checkbox-forward-line)
 
 ;; ** org-mode
 
@@ -30,7 +31,7 @@
 
   (global-set-key (kbd "H-t") 'org-todo)
 
-  (global-set-key (kbd "H-SPC") 'leo-org-time-and-date-stamp-inactive)
+  (global-set-key (kbd "H-SPC") 'leo-org-timestamp-now-inactive)
   (global-set-key (kbd "s-SPC") 'org-time-stamp)
   )
 

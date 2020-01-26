@@ -1,34 +1,5 @@
 ;; * funcs.el in private/leo layer
 ;; * offset
-;; ** Insert inactive timestamp of current time
-
-(defun leo-org-time-and-date-stamp-inactive ()
-  "Insert inactive timestamp of current time"
-
-  ;; Calls org-time-stamp-inactive with universal prefix
-  (interactive)
-  (org-insert-time-stamp (current-time) t t)
-  )
-
-;; ** leo-checklist-to-not-done
-
-(defun leo-checklist-to-not-done
-    ()
-  "Replaces all checklist X with SPACE"
-  (interactive)
-
-  (save-excursion
-    (while (search-forward "[X]" nil t)
-      (replace-match "[ ]" nil t))
-    )
-  )
-
-;; Org-Mode: "boxes" Advance down org-mode checklist with C-S-n
-(fset 'boxes
-      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
-;; binding it to a handy key, since as a command it won't macro repeat
-(global-set-key (kbd "C-S-n") 'boxes)
-
 ;; ** set fonts
 
 (defun leo-set-fonts ()
@@ -67,20 +38,6 @@
   )
 
 ;; ** proc sprinted
-;; *** pipify word list
-
-(defun leo-pipify-word-list (arg)
-  "Converts multi-line word list into one line separated by pipes."
-  (interactive "p")
-
-  (dotimes (number arg)
-    (end-of-line)
-    (insert " | ")
-    (delete-char 1)
-    (end-of-line)
-    )
-  )
-
 ;; *** Textmind checklist funcs
 ;; **** create new sprinting
 
@@ -162,31 +119,4 @@
   (find-file "~/1-Mansort/1-Textmind/2-Linked/Inbox.org")
   (org-show-all)
   (goto-char (point-max))
-  )
-;; **** headingfy
-
-(defun leo-headingfy ()
-  "Create a heading and advance 2 paragraphs."
-  (interactive)
-
-  (org-open-line 2)
-  (org-insert-heading)
-  (insert "?")
-  (org-forward-paragraph)
-  (org-forward-paragraph)
-  (recenter-top-bottom 10)
-  )
-;; **** lazy-title
-
-(defun leo-lazy-title ()
-  "Advance to next heading while lazy-titling proc sprinted."
-  (interactive)
-
-  (org-narrow-to-subtree)
-  (org-previous-visible-heading 1)
-  (widen)
-  (org-cycle)
-  (org-next-visible-heading 1)
-  (org-narrow-to-subtree)
-  (goto-char (line-end-position))
   )
