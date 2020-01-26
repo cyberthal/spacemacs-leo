@@ -318,11 +318,6 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
-  ;; ox-hugo config
-  ;; (use-package ox-hugo
-  ;;   :ensure t          ;Auto-install the package from Melpa (optional)
-  ;;   :after ox)
-
   ;; Temporarily set to nil if multiple packages fail to install due to signature check failure
   ;; http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
   (setq package-check-signature t)

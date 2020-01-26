@@ -96,9 +96,9 @@
 
 ;; add line spacing to org-mode
 (defun leo-space-lines ()
-  (setq line-spacing 5)
-  )
+  (setq line-spacing 5))
 (add-hook 'org-mode-hook 'leo-space-lines)
+
 ;; *** use org UIUDs
 
 ;; Use global IDs (for unique links)
