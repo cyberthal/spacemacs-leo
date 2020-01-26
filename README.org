@@ -9,7 +9,7 @@
 - [[#install][Install]]
   - [[#install-spacemacs][Install Spacemacs]]
   - [[#clone-and-install-the-layer][Clone and install the layer]]
-    - [[#to-self-on-development-account-install-dev-branch][to self: On development account, install dev branch]]
+    - [[#to-self-on-development-account-install-dev-branch-on-chemacsdev][to self: On development account, install dev branch on chemacs/dev]]
   - [[#create-expected-textmind-directories][Create expected Textmind directories]]
   - [[#add-layer-to-spacemacs][Add layer to =~/.spacemacs=]]
   - [[#run-spacemacs-to-install-new-packages][run Spacemacs to install new packages]]
@@ -37,7 +37,7 @@ cd ~/1-Mansort/2-Other-text/Github/Emacs/My/Spacemacs/Leo
 ./install-nixlike.sh
 #+end_src
 
-*** to self: On development account, install dev branch
+*** to self: On development account, install dev branch on chemacs/dev
 
 So that customizations I initiate there are saved into Dev instead of Prod.
 And so that I can experiment without breaking my other machines.
