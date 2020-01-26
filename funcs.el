@@ -81,8 +81,8 @@
     )
   )
 
-;; *** Textmind checklist funcs DONE
-;; **** create new sprinting DONE
+;; *** Textmind checklist funcs
+;; **** create new sprinting
 
 (defun leo-create-new-sprinting ()
     "Make new sprinting heading in '1sprinting.org"
@@ -95,9 +95,9 @@
   (insert (concat "\n\n* Sprinting " (leo-org-time-and-date-stamp-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
   (save-buffer))
 
-;; **** double-file prior sprinting log DONE
+;; **** double-file prior sprinting log
 
-;; ***** cut DONE
+;; ***** cut
 
 (defun leo-cut-prior-sprinting ()
   "File prior sprinting heading twice to '2sprinted.org"
@@ -123,7 +123,7 @@
   (goto-char (point-max))
   )
 
-;; ***** paste DONE
+;; ***** paste
 
 (defun leo-double-file-prior-sprinting ()
   "File prior sprinting heading twice to '2sprinted.org"
@@ -151,7 +151,7 @@
     (save-buffer)
     (switch-to-buffer "'Meta.org")
   )
-;; **** deletion pass DONE
+;; **** deletion pass
 
 (defun leo-proc-sprinted-deletion-pass ()
     "Setup other frame to begin deletion pass for proc sprinted checklist."
@@ -163,7 +163,7 @@
   (org-show-all)
   (goto-char (point-max))
   )
-;; **** headingfy DONE
+;; **** headingfy
 
 (defun leo-headingfy ()
   "Create a heading and advance 2 paragraphs."
@@ -176,7 +176,7 @@
   (org-forward-paragraph)
   (recenter-top-bottom 10)
   )
-;; **** lazy-title DONE
+;; **** lazy-title
 
 (defun leo-lazy-title ()
   "Advance to next heading while lazy-titling proc sprinted."
