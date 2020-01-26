@@ -10,7 +10,6 @@
   - [[#install-spacemacs][Install Spacemacs]]
   - [[#clone-and-install-the-layer][Clone and install the layer]]
     - [[#to-self-on-development-account-install-dev-branch-on-chemacsdev][to self: On development account, install dev branch on chemacs/dev]]
-  - [[#create-expected-textmind-directories][Create expected Textmind directories]]
   - [[#add-layer-to-spacemacs][Add layer to =~/.spacemacs=]]
   - [[#run-spacemacs-to-install-new-packages][run Spacemacs to install new packages]]
 - [[#suggested-hyper-keybind-for-macos][Suggested Hyper keybind for MacOS]]
@@ -43,15 +42,6 @@ So that customizations I initiate there are saved into Dev instead of Prod.
 And so that I can experiment without breaking my other machines.
 So that I can dogfood before releasing.
 Plus if I break something it's easy to just install /prod to recover to the last known good point.
-
-** Create expected Textmind directories
-
-Otherwise Spacemacs startup will fail with an error.
-
-#+begin_src sh
-mkdir -p ~/1-Mansort/1-Textmind/1-Agenda
-mkdir -p ~/1-Mansort/1-Textmind/2-Linked
-#+end_src
 
 ** Add layer to =~/.spacemacs=
 

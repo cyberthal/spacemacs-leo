@@ -238,12 +238,6 @@
     )
 )
 
-;; ** Textmind
-
-;; add Textmind to org-agenda scope
-(push "~/.emacs.d/private/leo/" load-path)
-(require 'maintext-toggle)
-
 ;; ** gif-screencast
 
 (with-eval-after-load 'gif-screencast
