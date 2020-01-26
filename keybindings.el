@@ -23,7 +23,7 @@
 (global-set-key (kbd "s-n") 'leo-pipify-lines)
 (global-set-key (kbd "C-c l") 'leo-org-store-link-fold-drawer)
 (global-set-key (kbd "H-v") 'leo-org-refactor-heading)
-(global-set-key (kbd "H-v") 'leo-org-toggle-checkbox-forward-line)
+(global-set-key (kbd "C-S-n") 'leo-org-toggle-checkbox-forward-line)
 
 ;; ** org-mode
 
