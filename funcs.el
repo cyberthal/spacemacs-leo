@@ -49,7 +49,7 @@
   (widen)
   (goto-char (point-max))
   (insert "Created new sprinting heading via leo-create-new-sprinting\n")
-  (insert (concat "\n\n* Sprinting " (leo-org-time-and-date-stamp-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
+  (insert (concat "\n\n* Sprinting " (leo-org-timestamp-now-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
   (save-buffer))
 
 ;; **** double-file prior sprinting log
