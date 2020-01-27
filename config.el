@@ -63,12 +63,12 @@
 
 ;; Mac
 (when (string-equal system-type "darwin")
-  (setq dired-listing-switches "-ADhl --group-directories-first")
+  (setq dired-listing-switches "-ADhlv --group-directories-first")
   )
 
 ;; Linux
 (when (string-equal system-type "gnu/linux")
-  (setq dired-listing-switches "-alGh --group-directories-first")
+  (setq dired-listing-switches "-alGhv --group-directories-first")
   )
 
 ;; remote?
