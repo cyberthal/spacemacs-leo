@@ -100,7 +100,7 @@ values."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https nil
+   dotspacemacs-elpa-https t
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
@@ -320,7 +320,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; Temporarily set to nil if multiple packages fail to install due to signature check failure
   ;; http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
-  (setq package-check-signature t)
+  ;; (setq package-check-signature nil)
+  ;; causes similar error if set to t and uncommented! (?)
 
   ;; To define the outline-minor-mode-prefix key before the package is loaded
   (defvar outline-minor-mode-prefix (kbd "H-c"))
