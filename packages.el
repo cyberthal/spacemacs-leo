@@ -27,8 +27,7 @@
   '(
     (dired+ :location (recipe :fetcher github :repo "emacsmirror/dired-plus" :files ("dired+.el")))
     osx-trash
-    (pianobar :location (recipe :fetcher github :repo "agrif/pianobar.el" :files ("pianobar.el")))
-    )
+    (pianobar :location (recipe :fetcher github :repo "agrif/pianobar.el" :files ("pianobar.el"))))
 
   "The list of Lisp packages required by the leo layer.
 
@@ -55,24 +54,12 @@ Each entry is either:
         `./local/PACKAGE/PACKAGE.el'
 
       - A list beginning with the symbol `recipe' is a melpa
-        recipe.  See: https://github.com/milkypostman/melpa#recipe-format"
-
-  )
+        recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
 (defun leo/init-dired+ ()
- (use-package dired+)
- )
+  (use-package dired+))
 
 (defun leo/init-pianobar ()
- (use-package pianobar)
- )
-
-(defun leo/init-osx-trash ()
-  (use-package osx-trash
-    :if (spacemacs/system-is-mac)
-    :demand
-    :config (osx-trash-setup)
-    )
-  )
+  (use-package pianobar))
 
 ;;; packages.el ends here
