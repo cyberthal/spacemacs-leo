@@ -49,7 +49,6 @@ values."
 
      ;; emacs
      helm
-     org
      (org :variables org-enable-hugo-support t)
      better-defaults
      (colors :variables colors-enable-nyan-cat-progress-bar t)
@@ -59,16 +58,16 @@ values."
      markdown
      pandoc
 
-     ;; my
-     leo
-     outshine
+     ;; os
+     osx
 
      ;; web
      twitter
      (elfeed :variables rmh-elfeed-org-files (list "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Elfeed/1.org"))
 
-     ;; os
-     osx
+     ;; my
+     leo
+     (pianobar :variables pianobar-config t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
