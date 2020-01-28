@@ -55,7 +55,7 @@ values."
      (colors :variables colors-enable-nyan-cat-progress-bar t)
 
      ;; text
-     (spell-checking :variables ispell-program-name "/usr/local/bin/ispell")
+     spell-checking
      markdown
      pandoc
 
