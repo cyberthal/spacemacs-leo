@@ -38,13 +38,14 @@
 
   )
 
+
 ;; ** proc sprinted
 ;; *** Textmind checklist funcs
 ;; **** create new sprinting
 
 (defun leo-create-new-sprinting ()
-    "Make new sprinting heading in '1sprinting.org"
-    (interactive)
+  "Make new sprinting heading in '1sprinting.org"
+  (interactive)
 
   (set-buffer "'1sprinting.org")
   (widen)
