@@ -90,3 +90,6 @@ flycheck_*.el
 
 # git
 .gitconfig
+
+# user added
+/Users/demo/1-Mansort/2-Other-text/Github/Emacs/My/Leo/persp-mode/Textmind-demo
