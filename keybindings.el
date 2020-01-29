@@ -12,7 +12,7 @@
 
 ;; on a mac: make the appkey on my external windows keyboard
 ;; that has switched the appkey to Fn using karabiner
-;; function as super modifier
+;; function as ?hyper modifier
 (setq ns-function-modifier 'hyper)
 
 ;; ** Treefactor

@@ -1,10 +1,6 @@
 ;; * config.el of private/leo layer
 ;; * offset
 ;; ** ergonomics
-;; *** audio
-
-(setq pianobar-config t)
-
 ;; *** visual
 ;; **** nyan-mode
 
@@ -219,12 +215,7 @@
 
 ;; *** Mac
 
-;; fixes dired display failure
-;; by switching from default mac ls to brew coreutils
-(when (eq system-type 'darwin)
-  (require 'ls-lisp)
-  (setq insert-directory-program "gls"))
-
+;; for bigscreen imac. inelegant detection. better solution exists, I suspect.
 (defun leo-darwin-supersize ()
   (if (eq system-type 'darwin) ;; OSX
       (text-scale-set 2)))

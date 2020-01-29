@@ -20,7 +20,7 @@ values."
    ;; installation feature and you have to explicitly list a layer in the
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
-   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-enable-lazy-installation 'all
    ;; If non-nil then Spacemacs will ask for confirmation before installing
    ;; a layer lazily. (default t)
    dotspacemacs-ask-for-lazy-installation t
@@ -49,33 +49,35 @@ values."
 
      ;; emacs
      helm
-     org
      (org :variables org-enable-hugo-support t)
      better-defaults
      (colors :variables colors-enable-nyan-cat-progress-bar t)
 
      ;; text
-     (spell-checking :variables ispell-program-name "/usr/local/bin/ispell")
+     spell-checking
      markdown
      pandoc
 
-     ;; my
-     leo
-     outshine
+     ;; os
+     osx
 
      ;; web
      twitter
      (elfeed :variables rmh-elfeed-org-files (list "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Elfeed/1.org"))
+
+     ;; my
+     leo
+     (pianobar :variables pianobar-config t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(easy-hugo ox-hugo gnu-elpa-keyring-update command-log-mode dired-filter gif-screencast anzu lispy dired-du org-make-toc bbcode-mode magit-annex git-annex dired-quick-sort outshine flycheck-package)
+   dotspacemacs-additional-packages '(easy-hugo gnu-elpa-keyring-update command-log-mode dired-filter gif-screencast lispy dired-du org-make-toc bbcode-mode magit-annex git-annex outshine flycheck-package)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(evil-anzu org-bullets orgit php-extras org-projectile)
+   dotspacemacs-excluded-packages '()
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -100,14 +102,14 @@ values."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https nil
+   dotspacemacs-elpa-https t
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
    ;; when the current branch is not `develop'. Note that checking for
    ;; new versions works via git commands, thus it calls GitHub services
    ;; whenever you start Emacs. (default nil)
-   dotspacemacs-check-for-update nil
+   dotspacemacs-check-for-update t
    ;; If non-nil, a form that evaluates to a package directory. For example, to
    ;; use different package directories for different Emacs versions, set this
    ;; to `emacs-version'.
@@ -127,7 +129,7 @@ values."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner 'nil
    ;; List of items to show in startup buffer or an association list of
    ;; the form `(list-type . list-size)`. If nil then it is disabled.
    ;; Possible values for list-type are:
@@ -163,7 +165,7 @@ values."
    dotspacemacs-ex-command-key ":"
    ;; The leader key accessible in `emacs state' and `insert state'
    ;; (default "M-m")
-   dotspacemacs-emacs-leader-key "H-x"
+   dotspacemacs-emacs-leader-key "M-m"
    ;; Major mode leader key is a shortcut key which is the equivalent of
    ;; pressing `<leader> m`. Set it to `nil` to disable it. (default ",")
    dotspacemacs-major-mode-leader-key ","
@@ -320,7 +322,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; Temporarily set to nil if multiple packages fail to install due to signature check failure
   ;; http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html
-  (setq package-check-signature t)
+  ;; (setq package-check-signature nil)
+  ;; causes similar error if set to t and uncommented! (?)
 
   ;; To define the outline-minor-mode-prefix key before the package is loaded
   (defvar outline-minor-mode-prefix (kbd "H-c"))
@@ -398,7 +401,7 @@ you should place your code here."
      (sequence "ASSIGN(a)" "DELEGATED(l)" "FOLLOWUP(o)" "DONNE(n)"))))
  '(package-selected-packages
    (quote
-    (pianobar elfeed-web elfeed-org elfeed-goodies ace-jump-mode noflet elfeed twittering-mode pandoc-mode ox-pandoc ht toml-mode racer flycheck-rust cargo rust-mode easy-hugo ox-hugo gnu-elpa-keyring-update command-log-mode osx-trash let-alist dired-filter dired-hacks-utils gif-screencast lispy zoutline counsel swiper ivy dired-du org-make-toc flycheck-package package-lint flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck auto-dictionary lv transient org-mime phpunit phpcbf php-auto-yasnippets drupal-mode php-mode org-category-capture git-annex magit-annex outorg yasnippet ruby-test-mode chruby dired+ winum unfill dired-quick-sort powershell yaml-mode rvm ruby-tools rubocop rspec-mode robe rbenv rake minitest bundler inf-ruby tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode bbcode-mode hide-comnt web-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode rainbow-mode rainbow-identifiers color-identifiers-mode mmm-mode markdown-toc markdown-mode gh-md ahk-mode outshine zenburn-theme xterm-color smeargle shell-pop orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mwim multi-term magit-gitflow htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (reveal-in-osx-finder pbcopy osx-dictionary launchctl pianobar elfeed-web elfeed-org elfeed-goodies ace-jump-mode noflet elfeed twittering-mode pandoc-mode ox-pandoc ht toml-mode racer flycheck-rust cargo rust-mode easy-hugo ox-hugo gnu-elpa-keyring-update command-log-mode osx-trash let-alist dired-filter dired-hacks-utils gif-screencast lispy zoutline counsel swiper ivy dired-du org-make-toc flycheck-package package-lint flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck auto-dictionary lv transient org-mime phpunit phpcbf php-auto-yasnippets drupal-mode php-mode org-category-capture git-annex magit-annex outorg yasnippet ruby-test-mode chruby dired+ winum unfill dired-quick-sort powershell yaml-mode rvm ruby-tools rubocop rspec-mode robe rbenv rake minitest bundler inf-ruby tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode bbcode-mode hide-comnt web-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode rainbow-mode rainbow-identifiers color-identifiers-mode mmm-mode markdown-toc markdown-mode gh-md ahk-mode outshine zenburn-theme xterm-color smeargle shell-pop orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mwim multi-term magit-gitflow htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
  '(paradox-github-token t)
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(safe-local-variable-values
