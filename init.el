@@ -152,11 +152,16 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font `("Inconsolata"
-                              :size ,(if (equal 1440 (display-pixel-height)) 38 38)
-                              ;; :size 24
-                              :weight normal
-                              :width normal
-                              :powerline-scale 1.1)
+                               :size ,(if (equal 1440 (display-pixel-height)) 36 24)
+                               ;; :size 24
+                               :weight normal
+                               :width normal
+                               :powerline-scale 1.1)
+   ;; WARNING: If Emacs server is started with emacsclient instead of emacs,
+   ;; then display height will return 11 instead of the correct value.
+   ;; Workaround: Start server with emacs and then use emacsclient when it's
+   ;; already running.
+
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
