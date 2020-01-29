@@ -34,10 +34,6 @@
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
 
-  ;; *** word wrap for org only
-
-  (add-hook 'org-mode-hook #'toggle-word-wrap)
-
   ;; *** line spacing
 
   ;; add line spacing to org-mode
