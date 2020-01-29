@@ -16,9 +16,10 @@
 ;; **** dired sorting switches, by OS
 
 (setq dired-listing-switches
-      ((equal system-type 'darwin) "-ADhlv --group-directories-first")
-      ((equal system-type 'gnu/linux) "-alGhv --group-directories-first")
-      (t "-al"))
+      (cond
+       ((equal system-type 'darwin) "-ADhlv --group-directories-first")
+       ((equal system-type 'gnu/linux) "-alGhv --group-directories-first")
+       (t "-al")))
 
 ;; remote?
 (add-hook
