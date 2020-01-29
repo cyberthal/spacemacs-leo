@@ -39,99 +39,99 @@
 
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
-;; *** make org start with wrapped lines.
+  ;; *** make org start with wrapped lines.
   (setq org-startup-truncated nil)
   (setq line-move-visual nil)
 
-;; *** word wrap for org only
+  ;; *** word wrap for org only
 
-(add-hook 'org-mode-hook #'toggle-word-wrap)
+  (add-hook 'org-mode-hook #'toggle-word-wrap)
 
-;; *** line spacing
+  ;; *** line spacing
 
-;; add line spacing to org-mode
-(defun leo-space-lines ()
-  (setq line-spacing 5))
-(add-hook 'org-mode-hook 'leo-space-lines)
+  ;; add line spacing to org-mode
+  (defun leo-space-lines ()
+    (setq line-spacing 5))
+  (add-hook 'org-mode-hook 'leo-space-lines)
 
-;; *** use org UIUDs
+  ;; *** use org UIUDs
 
-;; Use global IDs (for unique links)
-(require 'org-id)
+  ;; Use global IDs (for unique links)
+  (require 'org-id)
 
-;; *** display
+  ;; *** display
 
-(dolist (face '(org-block-begin-line
-                org-block-end-line
-                org-verbatim
-;;                org-block-background
-                org-table
-                ))
-  (set-face-attribute face nil :inherit 'fixed-pitch)
-  )
-
-(add-hook 'org-mode-hook 'variable-pitch-mode)
-
-;; *** org priorities 0-9
-
-(setq org-highest-priority ?0)
-(setq org-lowest-priority ?9)
-(setq org-default-priority ?5)
-
-;; *** load org agenda files recursively
-
-;; http://stackoverflow.com/questions/17215868/recursively-adding-org-files-in-a-top-level-directory-for-org-agenda-files-take
-
-;; Collect all .org from my Org directory and subdirs
-
-(setq org-agenda-file-regexp "\\`[^.].*\\.org\\'") ; default value
-(setq org-agenda-files nil)
-(defun load-org-agenda-files-recursively (dir) "Find all directories in DIR."
-    (unless (file-directory-p dir) (error "Not a directory `%s'" dir))
-    (unless (equal (directory-files dir nil org-agenda-file-regexp t) nil)
-      (add-to-list 'org-agenda-files dir)
+  (dolist (face '(org-block-begin-line
+                  org-block-end-line
+                  org-verbatim
+                  ;;                org-block-background
+                  org-table
+                  ))
+    (set-face-attribute face nil :inherit 'fixed-pitch)
     )
-    (dolist (file (directory-files dir nil nil t))
-        (unless (member file '("." ".."))
-            (let ((file (concat dir file "/")))
-                (when (file-directory-p file)
-                    (load-org-agenda-files-recursively file)
-                )
-            )
-        )
-    )
-)
 
-;; *** load bbcodeize
+  (add-hook 'org-mode-hook 'variable-pitch-mode)
 
-(push "~/.emacs.d/private/leo/bbcode/" load-path)
-(require 'bbcodeize)
+  ;; *** org priorities 0-9
 
-;; *** MobileOrg
+  (setq org-highest-priority ?0)
+  (setq org-lowest-priority ?9)
+  (setq org-default-priority ?5)
 
-;; Set to the location of your Org files on your local system
-;; (setq org-directory "~/1-Mansort/1-Textmind")
-;; Set to the name of the file where new notes will be stored
-;; (setq org-mobile-inbox-for-pull "~/1-Mansort/1-Textmind/2-Linked/flagged.org")
-;; Set to <your Dropbox root directory>/MobileOrg.
-;; (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+  ;; *** load org agenda files recursively
 
-;; Enable encryption
-;; (setq org-mobile-use-encryption t)
-;; Set a password
-;; (setq org-mobile-encryption-password
-;;       (condition-case nil
-;;           (with-temp-buffer
-;;             (insert-file-contents "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Mobileorg/Password.txt")
-;;             (goto-char (point-max))
-;;             (delete-char -1)
-;;             (buffer-string))
-;;         (user-error "%s" "MobileOrg password file not found")
-;;         )
-;;       )
-;; *** end org-mode block
+  ;; http://stackoverflow.com/questions/17215868/recursively-adding-org-files-in-a-top-level-directory-for-org-agenda-files-take
 
-) 
+  ;; Collect all .org from my Org directory and subdirs
+
+  (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'") ; default value
+  (setq org-agenda-files nil)
+  (defun load-org-agenda-files-recursively (dir) "Find all directories in DIR."
+         (unless (file-directory-p dir) (error "Not a directory `%s'" dir))
+         (unless (equal (directory-files dir nil org-agenda-file-regexp t) nil)
+           (add-to-list 'org-agenda-files dir)
+           )
+         (dolist (file (directory-files dir nil nil t))
+           (unless (member file '("." ".."))
+             (let ((file (concat dir file "/")))
+               (when (file-directory-p file)
+                 (load-org-agenda-files-recursively file)
+                 )
+               )
+             )
+           )
+         )
+
+  ;; *** load bbcodeize
+
+  (push "~/.emacs.d/private/leo/bbcode/" load-path)
+  (require 'bbcodeize)
+
+  ;; *** MobileOrg
+
+  ;; Set to the location of your Org files on your local system
+  ;; (setq org-directory "~/1-Mansort/1-Textmind")
+  ;; Set to the name of the file where new notes will be stored
+  ;; (setq org-mobile-inbox-for-pull "~/1-Mansort/1-Textmind/2-Linked/flagged.org")
+  ;; Set to <your Dropbox root directory>/MobileOrg.
+  ;; (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+
+  ;; Enable encryption
+  ;; (setq org-mobile-use-encryption t)
+  ;; Set a password
+  ;; (setq org-mobile-encryption-password
+  ;;       (condition-case nil
+  ;;           (with-temp-buffer
+  ;;             (insert-file-contents "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Mobileorg/Password.txt")
+  ;;             (goto-char (point-max))
+  ;;             (delete-char -1)
+  ;;             (buffer-string))
+  ;;         (user-error "%s" "MobileOrg password file not found")
+  ;;         )
+  ;;       )
+  ;; *** end org-mode block
+
+  ) 
 
 ;; ** by OS
 ;; *** Windows path & exec-path
