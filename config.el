@@ -13,10 +13,6 @@
 (require 'dired-x) ; Enable dired-x
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
 
-;; dired-quick-sort activate
-;; (require 'dired-quick-sort)
-;; (dired-quick-sort-setup)
-
 (setq delete-by-moving-to-trash t)
 ;; **** dired sorting by directories first
 
