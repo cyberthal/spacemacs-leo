@@ -35,17 +35,9 @@
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
 
-  ;; prose with markup needs more line spacing
-  (defun leo-space-lines ()
-    (setq line-spacing 0.175))
-  (add-hook 'org-mode-hook 'leo-space-lines)
-
-  ;; Use global IDs (for unique links)
-  (require 'org-id)
-
   ;; variable pitch for prose
   (add-hook 'org-mode-hook 'variable-pitch-mode)
-  ;; fixed pitch for prose
+  ;; fixed pitch for code
   (dolist (face '(org-block-begin-line
                   org-block-end-line
                   org-verbatim
@@ -53,44 +45,13 @@
                   org-table))
     (set-face-attribute face nil :inherit 'fixed-pitch))
 
-  ;; priorities 0-9
-  (setq org-highest-priority ?0)
-  (setq org-lowest-priority ?9)
-  (setq org-default-priority ?5)
+  ;; prose with markup needs more line spacing
+  (defun leo-space-lines ()
+    (setq line-spacing 0.175))
+  (add-hook 'org-mode-hook 'leo-space-lines)
 
-  ;; load org agenda files recursively
-  ;; http://stackoverflow.com/questions/17215868/recursively-adding-org-files-in-a-top-level-directory-for-org-agenda-files-take
-
-  ;; *** load bbcodeize
-
-  (push "~/.emacs.d/private/leo/bbcode/" load-path)
-  (require 'bbcodeize)
-
-  ;; *** MobileOrg
-
-  ;; Set to the location of your Org files on your local system
-  ;; (setq org-directory "~/1-Mansort/1-Textmind")
-  ;; Set to the name of the file where new notes will be stored
-  ;; (setq org-mobile-inbox-for-pull "~/1-Mansort/1-Textmind/2-Linked/flagged.org")
-  ;; Set to <your Dropbox root directory>/MobileOrg.
-  ;; (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
-
-  ;; Enable encryption
-  ;; (setq org-mobile-use-encryption t)
-  ;; Set a password
-  ;; (setq org-mobile-encryption-password
-  ;;       (condition-case nil
-  ;;           (with-temp-buffer
-  ;;             (insert-file-contents "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Mobileorg/Password.txt")
-  ;;             (goto-char (point-max))
-  ;;             (delete-char -1)
-  ;;             (buffer-string))
-  ;;         (user-error "%s" "MobileOrg password file not found")
-  ;;         )
-  ;;       )
-  ;; *** end org-mode block
-
-  ) 
+  ;; Use UUIDs
+  (require 'org-id))
 
 ;; ** by OS
 ;; *** Windows path & exec-path
