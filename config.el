@@ -2,47 +2,10 @@
 ;; * offset
 ;; ** ergonomics
 ;; *** visual
-;; **** nyan-mode
-
-                                        ; (spaceline-toggle-nyan-cat-on)
-
-;; **** removes annoying left fringe arrow for wrapped lines.
-(setq-default fringe-indicator-alist '(
-                                       (truncation left-arrow right-arrow)
-                                       (continuation nil right-curly-arrow) ;; left-curly-arrow
-                                       (overlay-arrow . right-triangle)
-                                       (up . up-arrow)
-                                       (down . down-arrow)
-                                       (top top-left-angle top-right-angle)
-                                       (bottom bottom-left-angle bottom-right-angle top-right-angle top-left-angle)
-                                       (top-bottom left-bracket right-bracket top-right-angle top-left-angle)
-                                       (empty-line . empty-line)
-                                       (unknown . question-mark)))
-
-
 ;; **** golden ratio mode on
 
 (with-eval-after-load 'org
-  (spacemacs/toggle-golden-ratio-on)
-  )
-
-;; *** text scale
-
-(defgroup leo nil "leo Spacemacs layer."
-  :group 'convenience)
-
-(defcustom leo-supersize-text t
-  "Non-nil if text should be supersized."
-  :type 'boolean
-  :group 'leo)
-
-(when leo-supersize-text
-  (add-hook 'org-mode-hook
-            'leo-darwin-supersize)
-  (add-hook 'dired-mode-hook
-            'leo-darwin-supersize)
-  (add-hook 'markdown-mode-hook
-            'leo-darwin-supersize))
+  (spacemacs/toggle-golden-ratio-on))
 
 ;; *** dired
 ;; **** misc
@@ -212,13 +175,6 @@
 ;; (setq exec-path '("c:/msys32/mingw32/bin" "C:/msys32/usr/local/bin" "C:/msys32/usr/bin" "C:/msys32/usr/bin" "C:/Windows/System32" "C:/Windows" "C:/Windows/System32/Wbem" "C:/Windows/System32/WindowsPowerShell/v1.0/" "C:/msys32/usr/bin/site_perl" "C:/msys32/usr/bin/vendor_perl" "C:/msys32/usr/bin/core_perl" "c:/msys32/mingw32/libexec/emacs/25.1/i686-w64-mingw32"))
 ;; (getenv "PATH")
 ;; (insert exec-path)
-
-;; *** Mac
-
-;; for bigscreen imac. inelegant detection. better solution exists, I suspect.
-(defun leo-darwin-supersize ()
-  (if (eq system-type 'darwin) ;; OSX
-      (text-scale-set 2)))
 
 ;; *** CentOS git path
 

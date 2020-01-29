@@ -151,11 +151,12 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Inconsolata"
-                               :size 24
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.1)
+   dotspacemacs-default-font `("Inconsolata"
+                              :size ,(if (equal 1440 (display-pixel-height)) 34 24)
+                              ;; :size 24
+                              :weight normal
+                              :width normal
+                              :powerline-scale 1.1)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands (M-x) (after pressing on the leader key).
@@ -372,7 +373,6 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(find-file-visit-truename nil)
  '(global-dired-hide-details-mode t)
- '(leo-supersize-text t)
  '(ls-lisp-dirs-first t)
  '(ls-lisp-use-insert-directory-program t)
  '(nrepl-message-colors
