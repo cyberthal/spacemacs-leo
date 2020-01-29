@@ -37,7 +37,7 @@
 
   ;; prose with markup needs more line spacing
   (defun leo-space-lines ()
-    (setq line-spacing 0.2))
+    (setq line-spacing 0.175))
   (add-hook 'org-mode-hook 'leo-space-lines)
 
   ;; Use global IDs (for unique links)
