@@ -13,7 +13,7 @@
 (require 'dired-x) ; Enable dired-x
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
 
-(setq delete-by-moving-to-trash t)
+
 ;; **** dired sorting by directories first
 
 ;; Mac
