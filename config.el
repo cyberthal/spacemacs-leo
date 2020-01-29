@@ -35,7 +35,6 @@
 (with-eval-after-load 'org
 
   ;; *** make org start with wrapped lines.
-  (setq org-startup-truncated nil)
   (setq line-move-visual nil)
 
   ;; *** word wrap for org only
