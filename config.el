@@ -34,9 +34,6 @@
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
 
-  ;; *** make org start with wrapped lines.
-  (setq line-move-visual nil)
-
   ;; *** word wrap for org only
 
   (add-hook 'org-mode-hook #'toggle-word-wrap)
