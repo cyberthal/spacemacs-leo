@@ -152,7 +152,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font `("Inconsolata"
-                              :size ,(if (equal 1440 (display-pixel-height)) 34 24)
+                              :size ,(if (equal 1440 (display-pixel-height)) 40 24)
                               ;; :size 24
                               :weight normal
                               :width normal
