@@ -8,11 +8,9 @@
   (spacemacs/toggle-golden-ratio-on))
 
 ;; *** dired
-;; **** misc
+;; **** omit by default
 
-(require 'dired-x) ; Enable dired-x
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
-
 
 ;; **** dired sorting by directories first
 
