@@ -27,12 +27,13 @@
    (when (file-remote-p default-directory)
      (setq dired-actual-switches "-al"))))
 
-;; *** outshine
+;; *** outshine in .ahk
 
 (add-hook 'ahk-mode-hook 'outline-minor-mode)
 
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
+
   ;; *** make org start with wrapped lines.
   (setq org-startup-truncated nil)
   (setq line-move-visual nil)
