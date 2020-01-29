@@ -2,29 +2,10 @@
 ;; * offset
 ;; ** ergonomics
 ;; *** visual
-;; **** nyan-mode
-
-                                        ; (spaceline-toggle-nyan-cat-on)
-
-;; **** removes annoying left fringe arrow for wrapped lines.
-(setq-default fringe-indicator-alist '(
-                                       (truncation left-arrow right-arrow)
-                                       (continuation nil right-curly-arrow) ;; left-curly-arrow
-                                       (overlay-arrow . right-triangle)
-                                       (up . up-arrow)
-                                       (down . down-arrow)
-                                       (top top-left-angle top-right-angle)
-                                       (bottom bottom-left-angle bottom-right-angle top-right-angle top-left-angle)
-                                       (top-bottom left-bracket right-bracket top-right-angle top-left-angle)
-                                       (empty-line . empty-line)
-                                       (unknown . question-mark)))
-
-
 ;; **** golden ratio mode on
 
 (with-eval-after-load 'org
-  (spacemacs/toggle-golden-ratio-on)
-  )
+  (spacemacs/toggle-golden-ratio-on))
 
 ;; *** text scale
 
