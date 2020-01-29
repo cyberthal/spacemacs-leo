@@ -35,60 +35,44 @@
 ;; ** org-mode & bbcodeize
 (with-eval-after-load 'org
 
-  ;; *** line spacing
-
-  ;; add line spacing to org-mode
+  ;; prose with markup needs more line spacing
   (defun leo-space-lines ()
-    (setq line-spacing 5))
+    (setq line-spacing 0.2))
   (add-hook 'org-mode-hook 'leo-space-lines)
-
-  ;; *** use org UIUDs
 
   ;; Use global IDs (for unique links)
   (require 'org-id)
 
-  ;; *** display
-
+  ;; variable pitch for prose
+  (add-hook 'org-mode-hook 'variable-pitch-mode)
+  ;; fixed pitch for prose
   (dolist (face '(org-block-begin-line
                   org-block-end-line
                   org-verbatim
                   ;;                org-block-background
-                  org-table
-                  ))
-    (set-face-attribute face nil :inherit 'fixed-pitch)
-    )
+                  org-table))
+    (set-face-attribute face nil :inherit 'fixed-pitch))
 
-  (add-hook 'org-mode-hook 'variable-pitch-mode)
-
-  ;; *** org priorities 0-9
-
+  ;; priorities 0-9
   (setq org-highest-priority ?0)
   (setq org-lowest-priority ?9)
   (setq org-default-priority ?5)
 
-  ;; *** load org agenda files recursively
-
+  ;; load org agenda files recursively
   ;; http://stackoverflow.com/questions/17215868/recursively-adding-org-files-in-a-top-level-directory-for-org-agenda-files-take
 
   ;; Collect all .org from my Org directory and subdirs
 
-  (setq org-agenda-file-regexp "\\`[^.].*\\.org\\'") ; default value
-  (setq org-agenda-files nil)
+  ;; (setq org-agenda-files nil)
   (defun load-org-agenda-files-recursively (dir) "Find all directories in DIR."
          (unless (file-directory-p dir) (error "Not a directory `%s'" dir))
          (unless (equal (directory-files dir nil org-agenda-file-regexp t) nil)
-           (add-to-list 'org-agenda-files dir)
-           )
+           (add-to-list 'org-agenda-files dir))
          (dolist (file (directory-files dir nil nil t))
            (unless (member file '("." ".."))
              (let ((file (concat dir file "/")))
                (when (file-directory-p file)
-                 (load-org-agenda-files-recursively file)
-                 )
-               )
-             )
-           )
-         )
+                 (load-org-agenda-files-recursively file))))))
 
   ;; *** load bbcodeize
 
