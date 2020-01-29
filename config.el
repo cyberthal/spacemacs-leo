@@ -10,19 +10,15 @@
 ;; *** dired
 ;; **** omit by default
 
+;; no other way to set this as default
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode)))
 
-;; **** dired sorting by directories first
+;; **** dired sorting switches, by OS
 
-;; Mac
-(when (string-equal system-type "darwin")
-  (setq dired-listing-switches "-ADhlv --group-directories-first")
-  )
-
-;; Linux
-(when (string-equal system-type "gnu/linux")
-  (setq dired-listing-switches "-alGhv --group-directories-first")
-  )
+(setq dired-listing-switches
+      ((string-equal system-type "darwin") "-ADhlv --group-directories-first")
+      ((string-equal system-type "gnu/linux") "-alGhv --group-directories-first")
+      (t "-al"))
 
 ;; remote?
 (add-hook
