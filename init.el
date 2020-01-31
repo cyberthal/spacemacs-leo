@@ -369,10 +369,9 @@ you should place your code here."
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#d2ceda" "#f2241f" "#67b11d" "#b1951d" "#3a81c3" "#a31db1" "#21b8c7" "#655370"])
+ '(avy-case-fold-search nil)
  '(column-number-mode t)
  '(delete-by-moving-to-trash t)
- '(avy-case-fold-search nil)
- '(org-startup-truncated nil)
  '(dired-omit-extensions
    (quote
     (".ds_store" ".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".dfsl" ".pfsl" ".d64fsl" ".p64fsl" ".lx64fsl" ".lx32fsl" ".dx64fsl" ".dx32fsl" ".fx64fsl" ".fx32fsl" ".sx64fsl" ".sx32fsl" ".wx64fsl" ".wx32fsl" ".fasl" ".ufsl" ".fsl" ".dxl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".idx" ".lof" ".lot" ".glo" ".blg" ".bbl" ".cp" ".cps" ".fn" ".fns" ".ky" ".kys" ".pg" ".pgs" ".tp" ".tps" ".vr" ".vrs" "_archive")))
@@ -387,9 +386,13 @@ you should place your code here."
    (quote
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(org-adapt-indentation nil)
+ '(org-default-priority 53)
  '(org-export-backends (quote (ascii html md)))
+ '(org-highest-priority 48)
  '(org-id-link-to-org-use-id (quote create-if-interactive))
  '(org-indirect-buffer-display (quote other-window))
+ '(org-lowest-priority 57)
+ '(org-startup-truncated nil)
  '(org-structure-template-alist
    (quote
     (("a" . "export ascii")
@@ -407,9 +410,6 @@ you should place your code here."
     ((sequence "TODO(t)" "DONE(d)")
      (sequence "DEPENDENCIED(p)" "MAYBE(m)" "DEFER(e)" "WAIT(w)" "SCHEDULED(s)")
      (sequence "ASSIGN(a)" "DELEGATED(l)" "FOLLOWUP(o)" "DONNE(n)"))))
- '(org-highest-priority 48)
- '(org-default-priority 53)
- '(org-lowest-priority 57)
  '(package-selected-packages
    (quote
     (reveal-in-osx-finder pbcopy osx-dictionary launchctl pianobar elfeed-web elfeed-org elfeed-goodies ace-jump-mode noflet elfeed twittering-mode pandoc-mode ox-pandoc ht toml-mode racer flycheck-rust cargo rust-mode easy-hugo ox-hugo gnu-elpa-keyring-update command-log-mode osx-trash let-alist dired-filter dired-hacks-utils gif-screencast lispy zoutline counsel swiper ivy dired-du org-make-toc flycheck-package package-lint flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck auto-dictionary lv transient org-mime phpunit phpcbf php-auto-yasnippets drupal-mode php-mode org-category-capture git-annex magit-annex outorg yasnippet ruby-test-mode chruby dired+ winum unfill dired-quick-sort powershell yaml-mode rvm ruby-tools rubocop rspec-mode robe rbenv rake minitest bundler inf-ruby tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode bbcode-mode hide-comnt web-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc coffee-mode rainbow-mode rainbow-identifiers color-identifiers-mode mmm-mode markdown-toc markdown-mode gh-md ahk-mode outshine zenburn-theme xterm-color smeargle shell-pop orgit org-projectile org-present org org-pomodoro alert log4e gntp org-download mwim multi-term magit-gitflow htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
