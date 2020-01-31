@@ -425,7 +425,7 @@ you should place your code here."
    (quote
     ((interactive cider-repl-mode clojure-mode clojurec-mode clojurescript-mode clojurex-mode common-lisp-mode eshell-mode geiser-repl-mode inf-clojure-mode inferior-emacs-lisp-mode inferior-lisp-mode inferior-scheme-mode lisp-interaction-mode lisp-mode monroe-mode racket-mode racket-repl-mode scheme-interaction-mode scheme-mode slime-repl-mode stumpwm-mode))))
  '(tool-bar-mode nil)
- '(treefactor-alias-prefix-2 "leo")
+ '(treefactor-alias-prefix-1 "leo")
  '(treefactor-org-agenda-dir "~/1-Mansort/1-Textmind/1-Agenda/")
  '(treefactor-org-id-extra-dir "~/1-Mansort/1-Textmind/2-Linked/")
  '(treefactor-use-alias-prefixes t)
