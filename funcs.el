@@ -15,12 +15,10 @@
 
 (defun leo-xmodmap ()
   (interactive)
-  (start-process-shell-command "xmodmap" nil "xmodmap" "~/.Xmodmap")
-  )
+  (start-process-shell-command "xmodmap" nil "xmodmap" "~/.Xmodmap"))
 
 (when (eq system-type 'gnu/linux)
-  (global-set-key (kbd "<menu>") 'leo-xmodmap)
-  )
+  (global-set-key (kbd "<menu>") 'leo-xmodmap))
 
 ;; ** Textmind startup
 
@@ -34,14 +32,10 @@
 
   (if (string-equal user-full-name "demo")
       (persp-load-state-from-file "Textmind-demo")
-    (persp-load-state-from-file "Textmind-main"))
+    (persp-load-state-from-file "Textmind-main")))
 
-  )
-
-
-;; ** proc sprinted
-;; *** Textmind checklist funcs
-;; **** create new sprinting
+;; ** Textmind checklist funcs
+;; *** create new sprinting
 
 (defun leo-create-new-sprinting ()
   "Make new sprinting heading in '1sprinting.org"
@@ -54,9 +48,9 @@
   (insert (concat "\n\n* Sprinting " (leo-org-timestamp-now-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
   (save-buffer))
 
-;; **** double-file prior sprinting log
+;; *** double-file prior sprinting log
 
-;; ***** cut
+;; **** cut
 
 ;; (defun leo-cut-prior-sprinting ()
 ;;   "File prior sprinting heading twice to '2sprinted.org"
@@ -82,7 +76,7 @@
 ;;   (goto-char (point-max))
 ;;   )
 
-;; ***** paste
+;; **** paste
 
 ;; (defun leo-double-file-prior-sprinting ()
 ;;   "File prior sprinting heading twice to '2sprinted.org"
@@ -110,7 +104,7 @@
 ;;     (save-buffer)
 ;;     (switch-to-buffer "'Meta.org")
 ;;   )
-;; **** deletion pass
+;; *** deletion pass
 
 ;; (defun leo-proc-sprinted-deletion-pass ()
 ;;     "Setup other frame to begin deletion pass for proc sprinted checklist."
