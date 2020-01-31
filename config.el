@@ -32,18 +32,8 @@
 
 (add-hook 'ahk-mode-hook 'outline-minor-mode)
 
-;; ** org-mode 
+;; ** Org mode
 (with-eval-after-load 'org
-
-  ;; variable pitch for prose
-  (add-hook 'org-mode-hook 'variable-pitch-mode)
-  ;; fixed pitch for code
-  (dolist (face '(org-block-begin-line
-                  org-block-end-line
-                  org-verbatim
-                  ;;                org-block-background
-                  org-table))
-    (set-face-attribute face nil :inherit 'fixed-pitch))
 
   ;; prose with markup needs more line spacing
   (defun leo-space-lines ()
