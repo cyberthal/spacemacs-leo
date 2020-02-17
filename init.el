@@ -459,7 +459,8 @@ you should place your code here."
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3")
- '(vc-follow-symlinks (quote ask)))
+ '(vc-follow-symlinks (quote ask))
+ '(word-wrap t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
