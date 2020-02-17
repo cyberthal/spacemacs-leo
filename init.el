@@ -429,8 +429,6 @@ you should place your code here."
  '(sp-navigate-reindent-after-up
    (quote
     ((interactive cider-repl-mode clojure-mode clojurec-mode clojurescript-mode clojurex-mode common-lisp-mode eshell-mode geiser-repl-mode inf-clojure-mode inferior-emacs-lisp-mode inferior-lisp-mode inferior-scheme-mode lisp-interaction-mode lisp-mode monroe-mode racket-mode racket-repl-mode scheme-interaction-mode scheme-mode slime-repl-mode stumpwm-mode))))
- '(split-height-threshold 80)
- '(split-width-threshold 80)
  '(tool-bar-mode nil)
  '(treefactor-alias-prefix-1 "leo")
  '(treefactor-org-agenda-dir "~/1-Mansort/1-Textmind/1-Agenda/")
@@ -460,6 +458,8 @@ you should place your code here."
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3")
  '(vc-follow-symlinks (quote ask))
+ '(window-min-height 8)
+ '(window-min-width 20)
  '(word-wrap t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
