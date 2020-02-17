@@ -429,7 +429,7 @@ you should place your code here."
  '(sp-navigate-reindent-after-up
    (quote
     ((interactive cider-repl-mode clojure-mode clojurec-mode clojurescript-mode clojurex-mode common-lisp-mode eshell-mode geiser-repl-mode inf-clojure-mode inferior-emacs-lisp-mode inferior-lisp-mode inferior-scheme-mode lisp-interaction-mode lisp-mode monroe-mode racket-mode racket-repl-mode scheme-interaction-mode scheme-mode slime-repl-mode stumpwm-mode))))
- '(split-height-threshold nil)
+ '(split-height-threshold 80)
  '(split-width-threshold 80)
  '(tool-bar-mode nil)
  '(treefactor-alias-prefix-1 "leo")
@@ -466,6 +466,6 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-date ((t (:foreground "#7590db" :underline t :height 0.8 :width normal))))
+ '(org-date ((t (:foreground "#7590db" :underline t :height 0.7 :width condensed))))
  '(org-drawer ((t (:foreground "LightSkyBlue" :height 0.7 :width condensed))))
  '(org-special-keyword ((t (:foreground "#bc6ec5" :height 0.7 :width condensed)))))
