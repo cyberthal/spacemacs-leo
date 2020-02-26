@@ -1,0 +1,47 @@
+*** Inbox.org
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+
+**** TODO [#1] set leuven as default theme for imac@demo
+
+**** TODO [#2] rationalize spacemacs keybinds
+
+I need to rationalize my keybinds to make sense in Spacemacs logic.
+there's currently little logic to them.
+[2020-01-30 Thu 14:14]
+
+**** TODO [#2] spacemacs | layer | leo | keybind | add
+
+bind 
+<C-up|down> runs the command org-backward-paragraph
+to the toggle between my hands
+
+**** TODO [#2] troubleshoot [[id:4CFC80C5-5D0C-4150-80E9-03A9F7920D64][spacemacs | bug | startup | windows | let-bound]]
+
+**** TODO [#2] address agenda files in init.el
+
+Found list of Org agenda files in my init.el again
+Gotta put a stop to that!
+or do I? It's not like I commit from prod.
+And it's probably nice to have them stored.
+It's a beginner's trap though.
+[2020-01-31 Fri 14:38]
+
+**** TODO [#2] install better defaults on spacemacs/Leo 
+
+I'm missing some of the "better defaults", I should install them.
+e.g. zap up to char.
+[2020-02-07 Fri 09:07]
+
+**** TODO [#2] implement the conditional layer logic on leo
+
+[[id:3566F863-5A45-4B37-AC27-334D525F5273][Spacemacs | layers | invocation | conditional]]
+
+**** TODO [#2] hide .DS_Store in Dired
+
+shouldn't be seeing 
+.DS_Store
+in dired. 
+figure out how to disable
+[2020-01-23 Thu 07:52]
