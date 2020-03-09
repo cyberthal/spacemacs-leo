@@ -35,17 +35,17 @@
     (persp-load-state-from-file "Textmind-main")))
 
 ;; ** Textmind checklist funcs
-;; *** create new sprinting
+;; *** create new rambling
 
-(defun leo-create-new-sprinting ()
-  "Make new sprinting heading in '1sprinting.org"
+(defun leo-create-new-rambling ()
+  "Make new rambling heading in '1rambling.org"
   (interactive)
 
-  (set-buffer "'1sprinting.org")
+  (set-buffer "'1rambling.org")
   (widen)
   (goto-char (point-max))
-  (insert "Created new sprinting heading via leo-create-new-sprinting\n")
-  (insert (concat "\n\n* Sprinting " (leo-org-timestamp-now-inactive) "\n\n** proc sprinted\n\n*** deletion pass from bottom up\n\n"))
+  (insert "Created new rambling heading via leo-create-new-rambling\n")
+  (insert (concat "\n\n* Rambling " (leo-org-timestamp-now-inactive) "\n\n** proc rambled\n\n*** deletion pass from bottom up\n\n"))
   (save-buffer))
 
 ;; *** double-file prior sprinting log
