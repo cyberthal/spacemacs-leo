@@ -45,3 +45,24 @@ shouldn't be seeing
 in dired. 
 figure out how to disable
 [2020-01-23 Thu 07:52]
+
+**** Spacemacs | layers | leo | FR: enhancement | proc sprinted | duplication | automate | defer
+
+I should really automate the duplication of sprinted.
+or maybe not. It's such a critical operation, wouldn't want blind automation to screw something up due to an unexpected state.
+[2019-11-28 Thu 01:39]
+
+**** TODO add [[id:6E2037D5-14C3-46E3-8CCA-57AEE6239709][alphapapa/org-protocol-capture-html]] to spacemacs/leo and use it
+
+definitely want ASAP
+[2020-03-07 Sat 14:24]
+
+**** spacemacs | my setup | spellcheck | using spell-checking layer
+
+I'm using the Spacemacs spell-checking layer
+
+**** TODO finish '1sprinting to ramble rename
+
+bug - leo-textmind-startup opens '1sprinting.org instead of '1rambling.org
+fix that for self and textmind bibliodemos
+[2020-03-13 Fri 10:39]
