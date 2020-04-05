@@ -1,8 +1,8 @@
 ;; -*- mode: emacs-lisp; eval: (progn (pp-buffer) (indent-buffer)) -*-
 ((def-persp nil
-   ((def-buffer "'Daily-Sequence.org" "~/1-Mansort/1-Textmind/2-Linked/1-Persinter/Executive/Checklist/'Daily-Sequence.org" org-mode)
-    (def-buffer "'Meta.org" "~/1-Mansort/1-Textmind/2-Linked/1-Persinter/Executive/Checklist/'Meta.org" org-mode)
-    (def-buffer "'1sprinting.org" "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'1sprinting.org" org-mode)
+   ((def-buffer "'Daily-Sequence.org" "~/1-Mansort/1-Textmind/2-Linked/3-Persinter/Executive/Checklist/'Daily-Sequence.org" org-mode)
+    (def-buffer "'Meta.org" "~/1-Mansort/1-Textmind/2-Linked/3-Persinter/Executive/Checklist/'Meta.org" org-mode)
+    (def-buffer "'1rambling.org" "~/1-Mansort/1-Textmind/2-Linked/Hud/'1rambling.org" org-mode)
     )
    (def-wconf
      (((min-height . 8)
@@ -32,7 +32,7 @@
        (total-height . 61)
        (normal-height . 1.0)
        (normal-width . 0.3788300835654596)
-       (buffer "'1sprinting.org"
+       (buffer "'1rambling.org"
                (selected)
                (hscroll . 0)
                (fringes 8 8 nil)
@@ -118,7 +118,7 @@
           (total-height . 61)
           (normal-height . 1.0)
           (normal-width . 0.3788300835654596)
-          (buffer "'1sprinting.org"
+          (buffer "'1rambling.org"
                   (selected)
                   (hscroll . 0)
                   (fringes 8 8 nil)
@@ -175,8 +175,8 @@
         ""))))
    t nil nil)
  (def-persp "Textmind-main"
-   ((def-buffer "'Koans-Current.org" "~/1-Mansort/1-Textmind/2-Linked/1-Persinter/Koans/'Koans-Current.org" org-mode)
-    (def-buffer "'3dashboard.org" "~/1-Mansort/1-Textmind/2-Linked/8-Hud/'3dashboard.org" org-mode))
+   ((def-buffer "'Koans-Current.org" "~/1-Mansort/1-Textmind/2-Linked/3-Persinter/Koans/'Koans-Current.org" org-mode)
+    (def-buffer "'3dashboard.org" "~/1-Mansort/1-Textmind/2-Linked/Hud/'3dashboard.org" org-mode))
    (def-wconf
      (((min-height . 8)
        (min-width . 20)
@@ -205,7 +205,7 @@
        (total-height . 61)
        (normal-height . 1.0)
        (normal-width . 0.3788300835654596)
-       (buffer "'1sprinting.org"
+       (buffer "'1rambling.org"
                (selected)
                (hscroll . 0)
                (fringes 8 8 nil)
@@ -291,7 +291,7 @@
           (total-height . 61)
           (normal-height . 1.0)
           (normal-width . 0.3788300835654596)
-          (buffer "'1sprinting.org"
+          (buffer "'1rambling.org"
                   (selected)
                   (hscroll . 0)
                   (fringes 8 8 nil)
