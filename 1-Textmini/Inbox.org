@@ -66,3 +66,15 @@ I'm using the Spacemacs spell-checking layer
 bug - leo-textmind-startup opens '1sprinting.org instead of '1rambling.org
 fix that for self and textmind bibliodemos
 [2020-03-13 Fri 10:39]
+
+**** canceled [#2] remove leo-delete-this-buffer-and-file from Treefactor, cuz redundant with Spacemacs
+:PROPERTIES:
+:ID:       31F6EC14-B389-42FC-9664-6090192BDDC7
+:END:
+
+M-m f D runs the command spacemacs/delete-current-buffer-file
+appears to replace Treefactor function
+C-c k runs the command leo-delete-this-buffer-and-file
+[2020-01-29 Wed 13:17]
+
+still need to keep the function for those who don't use Spacemacs
