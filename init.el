@@ -352,8 +352,8 @@ you should place your code here."
   (require 'git-annex)                  ; need magit-annex too?
 
   (if (string-equal server-name "server")
-      (add-to-list 'load-path "~/1-Mansort/2-Other-text/Github/Emacs/My/Treefactor/Prod")
-    (add-to-list 'load-path "~/1-Mansort/2-Other-text/Github/Emacs/My/Treefactor/Dev"))
+      (add-to-list 'load-path "~/1-Mansort/2-Other-text/Git-/Hub/Emacs/My/Treefactor/Prod")
+    (add-to-list 'load-path "~/1-Mansort/2-Other-text/Git-/Hub/Emacs/My/Treefactor/Dev"))
   (use-package treefactor)
 
   (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
