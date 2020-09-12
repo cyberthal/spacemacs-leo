@@ -63,7 +63,7 @@ values."
 
      ;; web
      twitter
-     (elfeed :variables rmh-elfeed-org-files (list "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Elfeed/1.org"))
+     (elfeed :variables rmh-elfeed-org-files (list "~/1-Mansort/1-Textmind/3-Non/9-Code/Static-path/Elfeed/feeds.org"))
 
      ;; my
      leo
